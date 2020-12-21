@@ -1,4 +1,4 @@
-file: README
+file: prob.md
 sections:
 - file: prob11.md
   sections:
@@ -26,3 +26,26 @@ sections:
   - file: problemas13/Problemas13-03
   - file: problemas13/Problemas13-04
   - file: problemas13/Problemas13-05
+- file: prob14.md
+  sections:
+  - file: problemas14/Problemas14-01
+  - file: problemas14/Problemas14-02
+  - file: problemas14/Problemas14-03
+  - file: problemas14/Problemas14-04
+  - file: problemas14/Problemas14-05
+  - file: problemas14/Problemas14-06
+  - file: problemas14/Problemas14-07
+  - file: problemas14/Problemas14-08
+  - file: problemas14/Problemas14-09
+  - file: problemas14/Problemas14-10
+- file: prob15.md
+  sections:
+  - file: problemas15/Problemas15-01
+  - file: problemas15/Problemas15-02
+  - file: problemas15/Problemas15-03
+  - file: problemas15/Problemas15-04
+  - file: problemas15/Problemas15-05
+  - file: problemas15/Problemas15-06
+  - file: problemas15/Problemas15-07
+  - file: problemas15/Problemas15-08
+  - file: problemas15/Problemas15-09
