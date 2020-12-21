@@ -18,7 +18,28 @@ parse:
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: ao2021-problemas.tex
+
+sphinx:
+  config:
+    language: es
+    latex_elements:
+        papersize: a4paper
+        preamble: |
+          \DeclareUnicodeCharacter{03B1}{$\alpha$}
+          \DeclareUnicodeCharacter{03B2}{$\beta$}
+          \DeclareUnicodeCharacter{03C6}{$\phi$}
+          \DeclareUnicodeCharacter{03B4}{$\delta$}
+          \DeclareUnicodeCharacter{03B5}{$\epsilon$}
+          \DeclareUnicodeCharacter{03BB}{$\lambda$}
+          \DeclareUnicodeCharacter{03BC}{$\mu$}
+          \DeclareUnicodeCharacter{03B8}{$\theta$}
+          \DeclareUnicodeCharacter{03BA}{$\kappa$}
+          \DeclareUnicodeCharacter{1D719}{$\phi$}
+          \DeclareUnicodeCharacter{2032}{'}
+#        babel: |
+#          \usepackage[spanish]{babel}
+
 
 # Information about where the book exists on the web
 repository:
