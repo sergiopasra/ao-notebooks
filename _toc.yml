@@ -19,6 +19,7 @@ sections:
   - file: problemas12/Problemas12-04
   - file: problemas12/Problemas12-05
   - file: problemas12/Problemas12-06
+  - file: problemas12/Problemas12-07
 - file: prob13.md
   sections:
   - file: problemas13/Problemas13-01
