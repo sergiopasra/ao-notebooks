@@ -13,6 +13,6 @@ mínima del Sol es -18°) cuando la declinación del Sol es 16° N
 5. Demostrar que un lugar cualquiera de los trópicos, el tiempo que está el Sol sobre el
 horizonte varía entre aproximadamente 10h33m y 13h26m
 6. Calcular el ángulo horario de la puesta del Sol y el tiempo sidéreo para un observador en φ =
-54° 55’ cuando la longitud eclíptica del Sol es 49o49’
+54°55’ cuando la longitud eclíptica del Sol es 49°49’
 7. Calcular la duración del verano (en días) sabiendo que la ecuación del tiempo vale -1m27s
 en el solsticio de verano y 7m20s en el equinoccio de otoño.

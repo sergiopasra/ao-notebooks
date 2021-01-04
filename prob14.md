@@ -9,7 +9,7 @@ e=0.093, calcular la razón entre su velocidad orbital máxima y su velocidad or
 4. Suponiendo que el semieje mayor de la órbita de Saturno es 9.54 au y los periodo sidéreos
 de la Tierra y Saturno 365.25 días y 10760.65 días respectivamente, calcular cuántos días
 tiene Saturno de movimiento retrógrado durante un periodo sinódico.
-5. Calcular el la elongación máxima de la Tierra vista desde Marte, siendo el semieje mayor de
+5. Calcular la elongación máxima de la Tierra vista desde Marte, siendo el semieje mayor de
 la órbita de Marte a=1.524 au
 6. Calcular el periodo sidéreo de un asteroide con semieje mayor de la órbita a=4 au
 7. Estimar la duración de un tránsito de Venus sobre el Sol visto desde la Tierra. El tamaño
@@ -18,10 +18,10 @@ aparente del disco solar es de 32’ y el periodo sidéreo de Venus es de 224.7 
 distancia de la Tierra al Sol, de la Tierra a la Luna y el tamaño del Sol y la Luna en radios
 terrestres.
 Para la distancia Tierra-Sol, Aristarco calculó la elongación (ángulo Sol-Luna) en el
-momento de medialuna, cuando el ángulo de fase es de 90o. La medida de Aristarco para la
-elongación fue 1/30o de cuadrante menos de un ángulo recto, es decir 87o.
+momento de medialuna, cuando el ángulo de fase es de 90°. La medida de Aristarco para la
+elongación fue 1/30 de cuadrante menos de un ángulo recto, es decir 87°.
 Calcular el valor de la distancia al Sol en función del radio de la órbita lunar con la medida
-de Aristarco y con el valor real de 89o50’
+de Aristarco y con el valor real de 89°50’
 9. Calcular la fracción iluminada mínima de Júpiter, cuya órbita tiene un semieje mayor a=5.20
 au
 10. Calcular la duración del año de los eclipses suponiendo un año solar de 365.25 días y que el
