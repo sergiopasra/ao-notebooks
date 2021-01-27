@@ -1,6 +1,6 @@
 file: index
 sections:
-- file: prob11.md
+- file: prob11
   sections:
   - file: problemas11/Problemas11-01
   - file: problemas11/Problemas11-02
@@ -11,7 +11,7 @@ sections:
   - file: problemas11/Problemas11-07
   - file: problemas11/Problemas11-08
   - file: problemas11/Problemas11-09
-- file: prob12.md
+- file: prob12
   sections:
   - file: problemas12/Problemas12-01
   - file: problemas12/Problemas12-02
@@ -20,14 +20,14 @@ sections:
   - file: problemas12/Problemas12-05
   - file: problemas12/Problemas12-06
   - file: problemas12/Problemas12-07
-- file: prob13.md
+- file: prob13
   sections:
   - file: problemas13/Problemas13-01
   - file: problemas13/Problemas13-02
   - file: problemas13/Problemas13-03
   - file: problemas13/Problemas13-04
   - file: problemas13/Problemas13-05
-- file: prob14.md
+- file: prob14
   sections:
   - file: problemas14/Problemas14-01
   - file: problemas14/Problemas14-02
@@ -39,7 +39,7 @@ sections:
   - file: problemas14/Problemas14-08
   - file: problemas14/Problemas14-09
   - file: problemas14/Problemas14-10
-- file: prob15.md
+- file: prob15
   sections:
   - file: problemas15/Problemas15-01
   - file: problemas15/Problemas15-02
