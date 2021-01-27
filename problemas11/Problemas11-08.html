@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problema 8 &#8212; Ejercicios de Astronomia Observacional</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Problema 9" href="Problemas11-09.html" />
+    <link rel="prev" title="Problema 7" href="Problemas11-07.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ucm_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ejercicios de Astronomia Observacional</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prob.html">
+   Ejercicios de Astronomía Observacional
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../prob11.html">
+   Problemas 1.1
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-04.html">
+     Problema  4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-07.html">
+     Problema 7
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problema 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-09.html">
+     Problema 9
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob12.html">
+   Problemas 1.2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-07.html">
+     Problema 7
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob13.html">
+   Problemas 1.3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-05.html">
+     Problema 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob14.html">
+   Problemas 1.4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-07.html">
+     Problema 7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-08.html">
+     Problema 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-09.html">
+     Problema 9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-10.html">
+     Problema 10
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob15.html">
+   Problemas 1.5
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-07.html">
+     Problema 7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-08.html">
+     Problema 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-09.html">
+     Problema 9
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problemas11/Problemas11-08.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sergiopasra/ao-notebooks/master?urlpath=tree/problemas11/Problemas11-08.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#planteamiento">
+   Planteamiento
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculo-del-orto-y-el-ocaso">
+   Cálculo del orto y el ocaso
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tiempo-entre-orto-y-ocaso">
+   Tiempo entre orto y ocaso
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problema-8">
+<h1>Problema 8<a class="headerlink" href="#problema-8" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Analizar el movimiento diurno de la estrella β Tau.</p>
+<p>Coordenadas ecuatoriales</p>
+<p><strong>α = 05h25m37s.641</strong> y
+<strong>δ = 28º35’ 57’’.36</strong></p>
+<p>en Manila con latitud <strong>φ = 14°35’ 25’’</strong> y longitud <strong>λ = 120° 58′ 55′′ E</strong>.</p>
+<div class="section" id="planteamiento">
+<h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En primer lugar hay que verificar si la estrella tiene ortos y ocasos, es circumpolar o no visible. Las alturas máxima y mínima son:</p>
+<p><span class="math notranslate nohighlight">\( a_M = 90 - | \delta - \phi| \)</span></p>
+<p><span class="math notranslate nohighlight">\( a_m = -90 + | \delta + \phi| \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dec</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;28d35m57.36s&quot;</span><span class="p">)</span>
+<span class="n">ra</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;5h25m37.641s&quot;</span><span class="p">)</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;14d35m25s&quot;</span><span class="p">)</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;120d58m55s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_M</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dec</span> <span class="o">-</span> <span class="n">lat</span><span class="p">)</span>
+<span class="n">a_m</span> <span class="o">=</span> <span class="o">-</span><span class="n">Angle</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dec</span> <span class="o">+</span> <span class="n">lat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Altura máxima:&#39;</span><span class="p">,</span> <span class="n">a_M</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Altura mínima:&#39;</span><span class="p">,</span> <span class="n">a_m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Altura máxima: 75d59m27.64s
+Altura mínima: -46d48m37.64s
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dado que la altura mínima es &lt; 0 y la máxima es &gt;0, tendremos orto y ocaso</p>
+</div>
+<div class="section" id="calculo-del-orto-y-el-ocaso">
+<h2>Cálculo del orto y el ocaso<a class="headerlink" href="#calculo-del-orto-y-el-ocaso" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En el momento del orto y el ocaso, tenemos:</p>
+<p><span class="math notranslate nohighlight">\(
+\cos H_o  = -\tan \phi \tan \delta
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+\cos A_o = -\sin \delta / \cos \phi
+\)</span></p>
+<p>Los valores obtenidos serán para el orto o el ocaso, dependiendo de sus posiciones.</p>
+<p>Nótese que el coseno tiene el mismo signo en el primer y cuarto cuadrante (positivo) y en el segundo y tercero (negativo). Los signos indican que el orto y el ocaso pueden producirse en el primer y cuarto cuadrante o bien en el segundo y tercero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculamos H y A</span>
+<span class="n">cos_H</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+<span class="n">cos_A</span> <span class="o">=</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para el acimut</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cos(A)=&#39;</span><span class="p">,</span> <span class="n">cos_A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El coseno es negativo en el segundo y tercer cuadrantes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cos(A)= -0.49463153339006466
+El coseno es negativo en el segundo y tercer cuadrantes
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dada la orientación SWNE el acimut</span>
+<span class="n">A_1</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_A</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;rad&#39;</span><span class="p">)</span>
+<span class="n">A_2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span> <span class="o">-</span> <span class="n">A_1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acimut ocaso:&#39;</span><span class="p">,</span> <span class="n">A_1</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Acimut orto:&#39;</span><span class="p">,</span> <span class="n">A_2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Acimut ocaso: 119d38m43.6422s
+Acimut orto: 240d21m16.3578s
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para el ángulo horario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cos(H)=&#39;</span><span class="p">,</span> <span class="n">cos_H</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El coseno es negativo en el segundo y tercer cuadrantes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cos(H)= -0.14191546324959042
+El coseno es negativo en el segundo y tercer cuadrantes
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H_1</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_H</span><span class="p">))</span>
+<span class="n">H_2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span> <span class="o">-</span> <span class="n">H_1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ángulo horario ocaso:&#39;</span><span class="p">,</span> <span class="n">H_1</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ángulo horario orto:&#39;</span><span class="p">,</span> <span class="n">H_2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ángulo horario ocaso: 6h32m38.0883s
+Ángulo horario orto: 17h27m21.9117s
+</pre></div>
+</div>
+</div>
+</div>
+<p>En ambos casos, tanto los valores de acimut como de ángulo horario se pueden obtener como:</p>
+<p><span class="math notranslate nohighlight">\(H_2 = 360 - H_1 \)</span></p>
+<p><span class="math notranslate nohighlight">\(A_2 = 360 - A_1 \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tiempo sidéreo del orto y ocaso</span>
+<span class="n">TSL_1</span> <span class="o">=</span> <span class="n">ra</span> <span class="o">+</span> <span class="n">H_1</span>
+<span class="n">TSL_2</span> <span class="o">=</span> <span class="n">ra</span> <span class="o">+</span> <span class="n">H_2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TSL ocaso:&#39;</span><span class="p">,</span> <span class="n">TSL_1</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TSL orto:&#39;</span><span class="p">,</span> <span class="n">TSL_2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">hour</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TSL ocaso: 11h58m15.7293s
+TSL orto: 22h52m59.5527s
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tiempo-entre-orto-y-ocaso">
+<h2>Tiempo entre orto y ocaso<a class="headerlink" href="#tiempo-entre-orto-y-ocaso" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Se puede calcular de manera aproximada (con precisión de minutos) el tiempo que es visible un objeto como la diferencia entre el TSL de su ocaso y su orto, convirtiendo la escala de tiempo sidéro a tiempo universal.</p>
+<p><span class="math notranslate nohighlight">\( \Delta \mathrm{TSL} = 1.0027379091 \Delta t\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertimos tiempo sidéreo a tiempo TU</span>
+<span class="n">tsid_tu</span> <span class="o">=</span> <span class="mf">1.0027379091</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hourangle</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">hour</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Escala:&#39;</span><span class="p">,</span> <span class="n">tsid_tu</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escala: 1.0027379091 hourangle / h
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos utilizar el ángulo horario en lugar del tiempo sidéreo:</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{TSL_1} - \mathrm{TSL_2} = H_1 - H_2\)</span></p>
+<p>Además, dada la periodicidad del coseno,</p>
+<p><span class="math notranslate nohighlight">\(H_2 = 360 -H_1\)</span></p>
+<p>luego:</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{TSL_1} - \mathrm{TSL_2} = 2 H_1 \mod 360 \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta_tsl</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">H_1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta_T</span> <span class="o">=</span> <span class="n">delta_tsl</span> <span class="o">/</span> <span class="n">tsid_tu</span>
+<span class="c1"># Convertimos la unidades a horas</span>
+<span class="n">delta_T</span> <span class="o">=</span> <span class="n">delta_T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;hour&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiempo (horas) del objeto sobre el horizonte:&#39;</span><span class="p">,</span> <span class="n">delta_T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo (horas) del objeto sobre el horizonte: 13.052091365933943 h
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problemas11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Problemas11-07.html" title="previous page">Problema 7</a>
+    <a class='right-next' id="next-link" href="Problemas11-09.html" title="next page">Problema 9</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sergio Pascual<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

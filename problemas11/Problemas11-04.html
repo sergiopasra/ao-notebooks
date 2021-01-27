@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problema 4 &#8212; Ejercicios de Astronomia Observacional</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Problema 5" href="Problemas11-05.html" />
+    <link rel="prev" title="Problema 3" href="Problemas11-03.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/ucm_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ejercicios de Astronomia Observacional</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prob.html">
+   Ejercicios de Astronomía Observacional
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../prob11.html">
+   Problemas 1.1
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problema  4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-07.html">
+     Problema 7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-08.html">
+     Problema 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Problemas11-09.html">
+     Problema 9
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob12.html">
+   Problemas 1.2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas12/Problemas12-07.html">
+     Problema 7
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob13.html">
+   Problemas 1.3
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas13/Problemas13-05.html">
+     Problema 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob14.html">
+   Problemas 1.4
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-07.html">
+     Problema 7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-08.html">
+     Problema 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-09.html">
+     Problema 9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas14/Problemas14-10.html">
+     Problema 10
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../prob15.html">
+   Problemas 1.5
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-01.html">
+     Problema 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-02.html">
+     Problema 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-03.html">
+     Problema 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-04.html">
+     Problema 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-05.html">
+     Problema 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-06.html">
+     Problema 6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-07.html">
+     Problema 7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-08.html">
+     Problema 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../problemas15/Problemas15-09.html">
+     Problema 9
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+            title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problemas11/Problemas11-04.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+                title="Modo de pantalla completa"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sergiopasra/ao-notebooks/master?urlpath=tree/problemas11/Problemas11-04.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contenido
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#una-nota-respecto-al-tiempo">
+   Una nota respecto al tiempo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#planteamiento">
+   Planteamiento
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuatorial-a-horario">
+     Ecuatorial a horario
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordenadas-horarias-a-horizontales">
+   Coordenadas horarias a horizontales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usando-rotaciones-de-ejes">
+   Usando rotaciones de ejes
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problema-4">
+<h1>Problema  4<a class="headerlink" href="#problema-4" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Calcular las coordenadas horizontales de la estrella Altair (α Aql) con coordenadas:</p>
+<p><strong>RA 19h50m47  DEC +08° 52” 06”” (coordenadas ICRS J2000)</strong></p>
+<p>en Madrid, con <strong>latitud 40° 25’N  y longitud 3° 41” 31”” W</strong></p>
+<p>cuando el tiempo sidéreo local es <strong>TSL = 22h12m18s</strong></p>
+<div class="section" id="una-nota-respecto-al-tiempo">
+<h2>Una nota respecto al tiempo<a class="headerlink" href="#una-nota-respecto-al-tiempo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Para resolver el problema completo, necesitamos calcular a qué hora en tiempo civil o universal corresponde nuestro TSL. Veremos cómo hacerlo en el tema dedicado al cálculo del tiempo. De momento asumiremos el TSL como dado.</p>
+</div>
+<div class="section" id="planteamiento">
+<h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los problemas de cambio de coordenadas exigen pasar, normalmente, a través de varios sistemas.</p>
+<p>En este caso tenemos <strong>ecuatorial -&gt; horario -&gt; horizontal</strong>.</p>
+<p>Siempre es conveniente tener cierta idea de la configuración de la esfera celeste para nuestro ejemplo. En este caso nos encontramos en el hemisferio norte, con lo que los objetos que culminen lo harán en la parte sur del meridiano del observador. Además, la estrella tiene declinación positiva, así que se encontrará entre el <strong>ecuador celeste y polo norte</strong>.</p>
+<div>
+<img src="../_static/p11/spherecardinalpoints.png" width="500"/>
+</div><div class="section" id="ecuatorial-a-horario">
+<h3>Ecuatorial a horario<a class="headerlink" href="#ecuatorial-a-horario" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El cambio de coordenas ecuatoriales a horarias es simplemente:</p>
+<p><code class="docutils literal notranslate"><span class="pre">TSL</span> <span class="pre">=</span> <span class="pre">RA</span> <span class="pre">+</span> <span class="pre">HA</span></code></p>
+<p>y la coordenada de declinación es la misma.</p>
+<p>El único paso es convertir todas las coordenadas a una medida angular homogénea y dar el resultado entre 0-24h</p>
+<p><em>Nota</em></p>
+<p>Para facilitar las conversiones, utilizaré el paquete <code class="docutils literal notranslate"><span class="pre">astropy</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ra</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;19h50m47&quot;</span><span class="p">)</span> 
+<span class="n">dec</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;+08d52m06s&quot;</span><span class="p">)</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;40d25m&quot;</span><span class="p">)</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;-3d41m31s&quot;</span><span class="p">)</span>
+<span class="c1"># 2019-09-15 22:48:38.200 UTC</span>
+<span class="n">TSL</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;22h12m18s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ha</span> <span class="o">=</span> <span class="n">TSL</span> <span class="o">-</span> <span class="n">ra</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ha</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2h21m31s
+</pre></div>
+</div>
+</div>
+</div>
+<p>Las coordenadas horarias serán entonces:</p>
+<ul class="simple">
+<li><p><strong>DEC</strong>: +08d52m06s</p></li>
+<li><p><strong>H</strong>: 2h21m31s</p></li>
+</ul>
+<p>Dado que en coordenadas horarias el sur es 0h y el oeste 6h, la estrella se encuentra en algún lugar entre esos dos puntos</p>
+</div>
+</div>
+<div class="section" id="coordenadas-horarias-a-horizontales">
+<h2>Coordenadas horarias a horizontales<a class="headerlink" href="#coordenadas-horarias-a-horizontales" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El cambio sistema horario a horizontal requiere una rotación de ejes. De manera alternativa se puede utilizar trigonometría esférica para resolver el triángulo común formado por objeto, el polo norte y el cenit. Hay que tener cuidado, además, con la convención para el origen del ángulo de acimut.</p>
+<p>Las ecuaciones son (para acimut desde el Sur):</p>
+<p><span class="math notranslate nohighlight">\(
+\sin a = \sin \phi \sin \delta  + \cos \phi \cos \delta \cos H  \\
+\cos a \sin A = \cos \delta \sin H \\
+\cos a \cos A = -\cos \phi \sin \delta + \sin \phi \cos \delta \cos H
+\)</span></p>
+<p>Dado que <code class="docutils literal notranslate"><span class="pre">A</span></code> va de 0 a 360, necesitamos el seno y el coseno para determinar el cuadrante correcto del ángulo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ha</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">sin_a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos_a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7008712949299187
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin_A</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ha</span><span class="p">))</span> <span class="o">/</span> <span class="n">cos_a</span>
+<span class="n">cos_A</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ha</span><span class="p">))</span> <span class="o">/</span> <span class="n">cos_a</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sin_A</span><span class="p">,</span> <span class="n">cos_A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8162170642621954 0.5777453626012096
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dado que los dos valores son positivos, el resultado es directamente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">sin_A</span> <span class="o">/</span> <span class="n">cos_A</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">),</span> <span class="s2">&quot;A=&quot;</span><span class="p">,</span><span class="n">A</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 45d30m10.9801s A= 54d42m28.3709s
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esta medida de acimut tiene como referencia SWNE. Si el convenio de acimut fuera NESW, habría que sumar 180 grados (y restar 360 si fuera necesario)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_N</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;180d&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_N</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>234d42m28.3709s
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="usando-rotaciones-de-ejes">
+<h2>Usando rotaciones de ejes<a class="headerlink" href="#usando-rotaciones-de-ejes" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Otra manera de resolver el problema es utilizando rotaciones de ejes coordenados. Esta manera es más fácil para una computadora, que no tiene más que realizar productos matriciales.</p>
+<p>Para ello partimos de las coordenadas horarias y las convertimos en cartesianas.</p>
+<p><span class="math notranslate nohighlight">\(
+x = \cos \delta \cos H \\
+y = \cos \delta \sin H\\
+z = \sin \delta
+\)</span></p>
+<p>Nótese que este sistema de coordenadas está orientado según la regla de la mano izquierda, con el eje <code class="docutils literal notranslate"><span class="pre">x</span></code> hacia el sur , el <code class="docutils literal notranslate"><span class="pre">y</span></code> hacia el oeste y el <code class="docutils literal notranslate"><span class="pre">z</span></code> hacia el cenit. El ángulo <code class="docutils literal notranslate"><span class="pre">H</span></code> se incrementa en el sentido de las agujas del reloj.</p>
+<div>
+<img src="../_static/p11/sphereaxis.png" width="500"/>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos_dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+<span class="n">sin_dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
+<span class="n">cos_H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ha</span><span class="p">)</span>
+<span class="n">sin_H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ha</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">cos_dec</span> <span class="o">*</span> <span class="n">cos_H</span><span class="p">,</span> <span class="n">cos_dec</span> <span class="o">*</span> <span class="n">sin_H</span><span class="p">,</span> <span class="n">sin_dec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>El sistema horizontal será <em>diestro</em> o <em>zurdo</em> dependiendo del convenio de acimut. Si el ángulo va del sur al oeste, seguirá el mismo convenio que las coordenadas horarias, luego estará <strong>orientado a izquierdas</strong>.</p>
+<p><span class="math notranslate nohighlight">\(
+x' = \cos a \cos A \\
+y' = \cos a \sin A\\
+z' = \sin a
+\)</span></p>
+<p>Ambos sistemas tienen el eje <code class="docutils literal notranslate"><span class="pre">Y</span></code> común. Para pasar del sistema <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> al <code class="docutils literal notranslate"><span class="pre">X'Y'Z'</span></code> hay que realizar una rotación de <span class="math notranslate nohighlight">\(\psi = (90 - \phi)\)</span> en sentido horario entorno al eje <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
+<p>El cambio de origen del acimut se puede incluir también como una rotación adicional en el eje <code class="docutils literal notranslate"><span class="pre">Z</span></code>, de 180 grados si el origen es el norte en lugar del sur.</p>
+<p>Para ello basta con crear al matriz de rotación y realizar un producto matricial:</p>
+<p><span class="math notranslate nohighlight">\( r' = R_z(180) *  R_y(\psi) r \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Una función de python, para crear diferentes matices de rotación en x</span>
+
+<span class="k">def</span> <span class="nf">rot_x</span><span class="p">(</span><span class="n">ang</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> 
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">)],</span> 
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">)]</span>
+           <span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">rot_y</span><span class="p">(</span><span class="n">ang</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span> 
+            <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">)],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+            <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">)]</span>
+           <span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">rot_z</span><span class="p">(</span><span class="n">ang</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="mi">0</span><span class="p">],</span> 
+            <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang</span><span class="p">),</span> <span class="mi">0</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+           <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psi</span> <span class="o">=</span> <span class="p">(</span><span class="n">Angle</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span> <span class="o">-</span> <span class="n">lat</span><span class="p">)</span>
+<span class="n">ry</span> <span class="o">=</span> <span class="n">rot_y</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span>
+<span class="n">rz</span> <span class="o">=</span> <span class="n">rot_z</span><span class="p">(</span><span class="n">Angle</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># los términos con Quantity corresponden a que hemos</span>
+<span class="c1"># pasado un objeto Angle en lugar de un ángulo en radianes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ry</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&lt;Quantity 0.6483414&gt;, 0, &lt;Quantity -0.76134974&gt;], [0, 1, 0], [&lt;Quantity 0.76134974&gt;, 0, &lt;Quantity 0.6483414&gt;]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dot es la función de numpy para realizar productos de matrices</span>
+<span class="n">rp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rz</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ry</span><span class="p">,</span> <span class="n">r</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vector en el espacio primado</span>
+<span class="n">rp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.40492514, -0.57206311,  0.71328776])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Las tres componentes</span>
+<span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">zp</span> <span class="o">=</span> <span class="n">rp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">zp</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos_a_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin_A_2</span> <span class="o">=</span> <span class="n">yp</span> <span class="o">/</span> <span class="n">cos_a_2</span>
+<span class="n">cos_A_2</span> <span class="o">=</span> <span class="n">xp</span> <span class="o">/</span> <span class="n">cos_a_2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin_A</span><span class="p">,</span> <span class="n">cos_A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin_A_2</span><span class="p">,</span> <span class="n">cos_A_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8162170642621954 0.5777453626012096
+-0.8162170642621954 -0.5777453626012095
+</pre></div>
+</div>
+</div>
+</div>
+<p>El cambio de sgno se debe al cambio de origen en azimut:</p>
+<p><span class="math notranslate nohighlight">\(
+\sin(A + 180) = -\sin A \\
+\cos(A + 180) = -\cos A
+\)</span></p>
+<p>El resultado es el mismo que se calcula con las ecuaciones de triángulos esféricos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aquí utilizamos la función arctan2(x, y)</span>
+<span class="n">A_2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">sin_A_2</span><span class="p">,</span> <span class="n">cos_A_2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">),</span> <span class="s2">&quot;A=&quot;</span><span class="p">,</span><span class="n">A</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a= 45d30m10.9801s A= 54d42m28.3709s
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a2=&quot;</span><span class="p">,</span> <span class="n">a_2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">),</span> <span class="s2">&quot;A2=&quot;</span><span class="p">,(</span><span class="n">A_2</span><span class="o">+</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a2= 45d30m10.9801s A2= 234d42m28.3709s
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problemas11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Problemas11-03.html" title="previous page">Problema 3</a>
+    <a class='right-next' id="next-link" href="Problemas11-05.html" title="next page">Problema 5</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sergio Pascual<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
