@@ -42,4 +42,9 @@ sphinx:
 
 repository:
   url: https://github.com/sergiopasra/ao-notebooks
+  path_to_book: ao_notebooks
+  branch: master
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"  
 
