@@ -22,6 +22,7 @@ latex:
 
 sphinx:
   config:
+    master_doc: index
     language: es
     latex_elements:
         papersize: a4paper
