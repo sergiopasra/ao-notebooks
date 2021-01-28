@@ -452,7 +452,8 @@ horizonte varía entre aproximadamente 10h33m y 13h26m</p>
 <h2>Solución<a class="headerlink" href="#solucion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El ángulo horario <span class="math notranslate nohighlight">\(H\)</span> del orto y del ocaso cumple:</p>
 <p><span class="math notranslate nohighlight">\(\cos H = - \tan \delta \tan \phi\)</span></p>
-<p>Por otro lado, el tiempo sobre el horizonte es <span class="math notranslate nohighlight">\(2H\)</span> (en tiempo sidéreo).</p>
+<p>Por otro lado, el ángulo que se recorre sobre el horizonte es <span class="math notranslate nohighlight">\(2H\)</span>.</p>
+<p>El tiempo que se tarda en recorrer <span class="math notranslate nohighlight">\(2H\)</span> depende de la velocidad angular aparente del Sol. Si utilizamos el Sol medio, este recorre 24 horas de ángulo horario en 24 horas de tiempo (un días solar).</p>
 <p>En los trópicos, la latitud es <span class="math notranslate nohighlight">\(\phi = \epsilon\)</span>. Por otro lado, la declinación del Sol varía entre <span class="math notranslate nohighlight">\(\delta = -\epsilon\)</span> y <span class="math notranslate nohighlight">\(\delta = \epsilon\)</span>.</p>
 <p>Por lo tanto, <span class="math notranslate nohighlight">\(\cos H\)</span> varía entre:</p>
 <p><span class="math notranslate nohighlight">\(\cos H = \pm \tan^2 \epsilon\)</span></p>
@@ -486,22 +487,22 @@ horizonte varía entre aproximadamente 10h33m y 13h26m</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertimos tiempo sidéreo a tiempo TU</span>
-<span class="n">tsid_tu</span> <span class="o">=</span> <span class="mf">1.0027379091</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hourangle</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">hour</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Escala:&#39;</span><span class="p">,</span> <span class="n">tsid_tu</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Velocidad angular aparente del Sol medio</span>
+<span class="n">tsolm_tu</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hourangle</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">hour</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Escala:&#39;</span><span class="p">,</span> <span class="n">tsolm_tu</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escala: 1.0027379091 hourangle / h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escala: 1.0 hourangle / h
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h1</span> <span class="o">/</span> <span class="n">tsid_tu</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h2</span> <span class="o">/</span> <span class="n">tsid_tu</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h1</span> <span class="o">/</span> <span class="n">tsolm_tu</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h2</span> <span class="o">/</span> <span class="n">tsolm_tu</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -513,7 +514,7 @@ horizonte varía entre aproximadamente 10h33m y 13h26m</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo máximo:  13.407489564633464 h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo máximo:  13.444198052320628 h
 </pre></div>
 </div>
 </div>
@@ -525,7 +526,50 @@ horizonte varía entre aproximadamente 10h33m y 13h26m</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo mínimo:  10.526980033250817 h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo mínimo:  10.555801947679374 h
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">frac_hour_to_hms</span><span class="p">(</span><span class="n">tm</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert fraction of hour to HMS&quot;&quot;&quot;</span>
+    <span class="n">tt</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="s1">&#39;hr&#39;</span><span class="p">)</span>
+    
+    <span class="n">mh</span> <span class="o">=</span> <span class="n">tt</span> <span class="o">%</span> <span class="mi">1</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tt</span> <span class="o">-</span> <span class="n">mh</span><span class="p">)</span>
+    <span class="n">mm</span> <span class="o">=</span> <span class="n">mh</span> <span class="o">*</span> <span class="mi">60</span>
+    
+    <span class="n">sm</span> <span class="o">=</span> <span class="n">mm</span> <span class="o">%</span> <span class="mi">1</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mm</span> <span class="o">-</span> <span class="n">sm</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">sm</span> <span class="o">*</span> <span class="mi">60</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">h</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">m</span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiempo máximo: &#39;</span><span class="p">,</span> <span class="n">frac_hour_to_hms</span><span class="p">(</span><span class="n">t1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo máximo:  13h26m39.11s
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiempo mínimo: &#39;</span><span class="p">,</span> <span class="n">frac_hour_to_hms</span><span class="p">(</span><span class="n">t2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiempo mínimo:  10h33m20.89s
 </pre></div>
 </div>
 </div>

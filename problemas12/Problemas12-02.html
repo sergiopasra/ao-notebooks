@@ -536,33 +536,36 @@ Angulo horario para la declinación mínima: 66.10128194653048 grados
 </div>
 </div>
 </div>
-<p>Podemos estimar el tiempo sobre el horizonte usando el TSL o bien el ángulo horario. Además, dada la periodicidad del coseno se cumple que:</p>
+<p>Podemos estimar el tiempo sobre el horizonte usando el ángulo horario. Además, dada la periodicidad del coseno se cumple que:</p>
 <p><span class="math notranslate nohighlight">\(H_2 = - H_1\)</span></p>
 <p>luego:</p>
-<p><span class="math notranslate nohighlight">\(\mathrm{TSL_1} - \mathrm{TSL_2} = H_1 - H_2 = 2 H_1\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_1 - H_2 = 2 H_1\)</span></p>
 </div>
 <div class="section" id="tiempo-entre-orto-y-ocaso">
 <h2>Tiempo entre orto y ocaso<a class="headerlink" href="#tiempo-entre-orto-y-ocaso" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Se puede calcular de manera aproximada (con precisión de minutos) el tiempo que es visible un objeto como la diferencia entre el TSL de su ocaso y su orto, convirtiendo la escala de tiempo sidéro a tiempo universal.</p>
-<p><span class="math notranslate nohighlight">\( \Delta \mathrm{TSL} = 1.0027379091 \Delta t\)</span></p>
+<p>Para calcular el tiempo entre el orto y el ocaso, podemos suponer que el Sol se muve de manera aproximadamente uniforme en ascensión recta (Sol medio). Este objeto recorre 24 horas de ángulo horario en 24 horas de tiempo (dia solar), a diferencia de las estrellas, que recorren 24 horas de ángulo horario en 23h56m04s (día sidéreo).</p>
+<p>Para el Sol medio entonces:
+<span class="math notranslate nohighlight">\( \Delta H = \Delta t\)</span></p>
+<p>Mientras que para una estrella:</p>
+<p><span class="math notranslate nohighlight">\( \Delta H = 1.0027379091 \Delta t\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertimos tiempo sidéreo a tiempo TU</span>
-<span class="n">tsid_tu</span> <span class="o">=</span> <span class="mf">1.0027379091</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hourangle</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">hour</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Escala:&#39;</span><span class="p">,</span> <span class="n">tsid_tu</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertimos ángulo horaria a tiempo TU</span>
+<span class="n">h_escala_sol</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">hourangle</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">hour</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Escala:&#39;</span><span class="p">,</span> <span class="n">h_escala_sol</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escala: 1.0027379091 hourangle / h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escala: 1.0 hourangle / h
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta_T_M</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_M</span> <span class="o">/</span> <span class="n">tsid_tu</span> <span class="c1"># Tiempo sobre el horizonte máximo</span>
-<span class="n">delta_T_m</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_m</span> <span class="o">/</span> <span class="n">tsid_tu</span> <span class="c1"># Tiempo sobre el horizonte mínimo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta_T_M</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_M</span> <span class="o">/</span> <span class="n">h_escala_sol</span> <span class="c1"># Tiempo sobre el horizonte máximo</span>
+<span class="n">delta_T_m</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_m</span> <span class="o">/</span> <span class="n">h_escala_sol</span> <span class="c1"># Tiempo sobre el horizonte mínimo</span>
 </pre></div>
 </div>
 </div>
@@ -574,7 +577,7 @@ Angulo horario para la declinación mínima: 66.10128194653048 grados
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T max= 15.145030024937556 h T min= 8.789439572946728 h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T max= 15.186495740462604 h T min= 8.813504259537398 h
 </pre></div>
 </div>
 </div>
@@ -627,7 +630,7 @@ Angulo horario para la declinación mínima: 66.10128194653048 grados
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos_h_all</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
 <span class="n">h_all</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_h_all</span><span class="p">))</span>
-<span class="n">delta_T_all</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_all</span><span class="o">.</span><span class="n">hour</span> <span class="o">/</span> <span class="n">tsid_tu</span>
+<span class="n">delta_T_all</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_all</span><span class="o">.</span><span class="n">hour</span> <span class="o">/</span> <span class="n">h_escala_sol</span>
 </pre></div>
 </div>
 </div>
@@ -653,7 +656,7 @@ Angulo horario para la declinación mínima: 66.10128194653048 grados
 
 <span class="n">cos_h_lima</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">lat_lima</span><span class="p">)</span>
 <span class="n">h_all</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_h_lima</span><span class="p">))</span>
-<span class="n">delta_T_all</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_all</span><span class="o">.</span><span class="n">hour</span> <span class="o">*</span> <span class="n">tsid_tu</span>
+<span class="n">delta_T_all</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_all</span><span class="o">.</span><span class="n">hour</span> <span class="o">*</span> <span class="n">h_escala_sol</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">delta_T_all</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Lima, lat=12d03m00s&#39;</span><span class="p">)</span>
@@ -673,7 +676,7 @@ Angulo horario para la declinación mínima: 66.10128194653048 grados
 
 <span class="n">cos_h_hel</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">lat_hel</span><span class="p">)</span>
 <span class="n">h_all</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_h_hel</span><span class="p">))</span>
-<span class="n">delta_T_all</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_all</span><span class="o">.</span><span class="n">hour</span> <span class="o">*</span> <span class="n">tsid_tu</span>
+<span class="n">delta_T_all</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">h_all</span><span class="o">.</span><span class="n">hour</span> <span class="o">*</span> <span class="n">h_escala_sol</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">delta_T_all</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Helsinki, lat=60d10m32s&#39;</span><span class="p">)</span>
