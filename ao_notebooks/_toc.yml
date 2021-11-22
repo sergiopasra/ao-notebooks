@@ -1,4 +1,5 @@
-file: index
+format: jb-article
+root: index
 sections:
 - file: preamble
 - file: prob11
@@ -51,3 +52,19 @@ sections:
   - file: problemas15/Problemas15-07
   - file: problemas15/Problemas15-08
   - file: problemas15/Problemas15-09
+- file: prob2
+  sections:
+  - file: problemas2/Problemas2-01
+  - file: problemas2/Problemas2-02
+  - file: problemas2/Problemas2-03
+  - file: problemas2/Problemas2-04
+  - file: problemas2/Problemas2-05
+  - file: problemas2/Problemas2-06
+  - file: problemas2/Problemas2-07
+  - file: problemas2/Problemas2-08
+  - file: problemas2/Problemas2-09
+  - file: problemas2/Problemas2-10
+  - file: problemas2/Problemas2-11
+  - file: problemas2/Problemas2-12
+  - file: problemas2/Problemas2-13
+  - file: problemas2/Problemas2-14
