@@ -68,3 +68,10 @@ sections:
   - file: problemas2/Problemas2-12
   - file: problemas2/Problemas2-13
   - file: problemas2/Problemas2-14
+- file: prob34
+  sections:
+  - file: problemas34/Problemas34-01
+  - file: problemas34/Problemas34-02
+  - file: problemas34/Problemas34-03
+  - file: problemas34/Problemas34-04
+  - file: problemas34/Problemas34-05
