@@ -475,11 +475,12 @@ document.write(`
 <h3>Coordenadas horizontales a horarias<a class="headerlink" href="#coordenadas-horizontales-a-horarias" title="Permalink to this heading">#</a></h3>
 <p>El cambio de sistema horizontal a horario requiere unas ecuaciones simétricas a las usadas para la conversión inversea o bien una rotación de ejes con las matrices de rotación aplicadas en senstido inverso. Hay que tener cuidado, además, con la convención para el origen del ángulo de acimut.</p>
 <p>Las ecuaciones son (para acimut desde el Sur):</p>
-<p><span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \sin \delta = \sin \phi \sin a  - \cos \phi \cos a \cos A  \\
 \cos \delta \sin H = \cos a \sin A \\
 \cos \delta \cos H = \cos \phi \sin a + \sin \phi \cos a \cos A
-\)</span></p>
+\end{split}\]</div>
 <p>Dado que <code class="docutils literal notranslate"><span class="pre">A</span></code> va de 0 a 360, necesitamos el seno y el coseno para determinar el cuadrante correcto del ángulo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -674,7 +675,7 @@ Por Sergio Pascual
     
   <p class="copyright">
     
-      © Copyright Universidad Complutense de Madrid, 2020-2022.
+      © Copyright Universidad Complutense de Madrid, 2020-2023.
       <br/>
     
   </p>

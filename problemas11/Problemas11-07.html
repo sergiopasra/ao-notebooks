@@ -475,27 +475,30 @@ document.write(`
 <h3>Coordenadas ecuatoriales a eclípticas<a class="headerlink" href="#coordenadas-ecuatoriales-a-eclipticas" title="Permalink to this heading">#</a></h3>
 <p>El cambio del sistema ecuatorial a eclíptico require, o bien la resolución de un triángulo esférico, con polos <code class="docutils literal notranslate"><span class="pre">P</span></code> y <code class="docutils literal notranslate"><span class="pre">K</span></code> y ángulo entre ellos ε o bien la aplicación de una rotación <span class="math notranslate nohighlight">\(R_x\)</span>(ε).</p>
 <p>Las ecuaciones finales son:</p>
-<p><span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \sin \delta = \sin \beta \cos \epsilon  + \cos \beta \sin \epsilon \sin \lambda  \\
 \cos \delta \cos \alpha = \cos \beta \cos \lambda \\
 \cos \delta \sin \alpha = -\sin \beta \sin \epsilon + \cos \beta \cos \epsilon \sin \lambda
-\)</span></p>
+\end{split}\]</div>
 <p>Las ecuaciones del cambio inverso (eclípticas a ecuatoriales) pueden obtenerse cambiando</p>
 <ul class="simple">
 <li><p>(α, δ) &lt;-&gt; (β, λ)</p></li>
 <li><p>ε -&gt;  -ε</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \sin \beta = \sin \delta \cos (-\epsilon)  + \cos \delta \sin (-\epsilon) \sin \alpha  \\
 \cos \beta \cos \lambda = \cos \delta \cos \alpha \\
 \cos \beta \sin \lambda = -\sin \delta \sin (-\epsilon) + \cos \delta \cos (-\epsilon) \sin \alpha
-\)</span></p>
+\end{split}\]</div>
 <p>Es decir:</p>
-<p><span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \sin \beta = \sin \delta \cos \epsilon  - \cos \delta \sin \epsilon \sin \alpha  \\
 \cos \beta \cos \lambda = \cos \delta \cos \alpha \\
 \cos \beta \sin \lambda = \sin \delta \sin \epsilon + \cos \delta \cos \epsilon \sin \alpha
-\)</span></p>
+\end{split}\]</div>
 <div>
 <img src="../_static/p11/polarecliptic.png" width="500"/>
 </div><div class="cell docutils container">
@@ -559,13 +562,13 @@ seno negativo y coseno es un ángulo del cuarto cuadrante
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Para un ángulo negativo, sumamos 360 grados&quot;</span><span class="p">)</span>
 <span class="n">l_lon</span> <span class="o">=</span> <span class="n">l_lon</span> <span class="o">+</span> <span class="n">Angle</span><span class="p">(</span><span class="mf">360.0</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ecliptic longitude:&#39;</span><span class="p">,</span> <span class="n">l_lon</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Longitud eclíptica:&#39;</span><span class="p">,</span> <span class="n">l_lon</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">degree</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Para un ángulo negativo, sumamos 360 grados
-Ecliptic longitude: 345d10m00.1378007s
+Longitud eclíptica: 345d10m00.1378007s
 </pre></div>
 </div>
 </div>
@@ -664,7 +667,7 @@ Por Sergio Pascual
     
   <p class="copyright">
     
-      © Copyright Universidad Complutense de Madrid, 2020-2022.
+      © Copyright Universidad Complutense de Madrid, 2020-2023.
       <br/>
     
   </p>

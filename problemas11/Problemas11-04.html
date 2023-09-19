@@ -516,11 +516,12 @@ document.write(`
 <h2>Coordenadas horarias a horizontales<a class="headerlink" href="#coordenadas-horarias-a-horizontales" title="Permalink to this heading">#</a></h2>
 <p>El cambio sistema horario a horizontal requiere una rotación de ejes. De manera alternativa se puede utilizar trigonometría esférica para resolver el triángulo común formado por objeto, el polo norte y el cenit. Hay que tener cuidado, además, con la convención para el origen del ángulo de acimut.</p>
 <p>Las ecuaciones son (para acimut desde el Sur):</p>
-<p><span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \sin a = \sin \phi \sin \delta  + \cos \phi \cos \delta \cos H  \\
 \cos a \sin A = \cos \delta \sin H \\
 \cos a \cos A = -\cos \phi \sin \delta + \sin \phi \cos \delta \cos H
-\)</span></p>
+\end{split}\]</div>
 <p>Dado que <code class="docutils literal notranslate"><span class="pre">A</span></code> va de 0 a 360, necesitamos el seno y el coseno para determinar el cuadrante correcto del ángulo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -885,7 +886,7 @@ Por Sergio Pascual
     
   <p class="copyright">
     
-      © Copyright Universidad Complutense de Madrid, 2020-2022.
+      © Copyright Universidad Complutense de Madrid, 2020-2023.
       <br/>
     
   </p>
