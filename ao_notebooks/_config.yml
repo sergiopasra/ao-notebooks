@@ -35,18 +35,6 @@ sphinx:
     language: es
     latex_elements:
         papersize: a4paper
-        preamble: |
-          \DeclareUnicodeCharacter{03B1}{$\alpha$}
-          \DeclareUnicodeCharacter{03B2}{$\beta$}
-          \DeclareUnicodeCharacter{03C6}{$\phi$}
-          \DeclareUnicodeCharacter{03B4}{$\delta$}
-          \DeclareUnicodeCharacter{03B5}{$\epsilon$}
-          \DeclareUnicodeCharacter{03BB}{$\lambda$}
-          \DeclareUnicodeCharacter{03BC}{$\mu$}
-          \DeclareUnicodeCharacter{03B8}{$\theta$}
-          \DeclareUnicodeCharacter{03BA}{$\kappa$}
-          \DeclareUnicodeCharacter{1D719}{$\phi$}
-          \DeclareUnicodeCharacter{2032}{'}
 
 
 repository:
