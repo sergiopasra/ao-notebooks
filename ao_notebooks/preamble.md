@@ -10,7 +10,13 @@ kernelspec:
   name: python3
 ---
 
-# Uso de python
+% Creates a custom role for inserting raw latex
+```{role} raw-latex(raw)
+:format: latex
+```
+
+{raw-latex}`\section*{Uso de Python}`
+{raw-latex}`\addcontentsline{toc}{chapter}{Uso de Python}`
 
 
 Los problemas presentados a continuación están resueltos utilizando Python
@@ -36,11 +42,7 @@ Angle("45d34m12.3s")
 ```
 
 ```{code-cell} ipython3
-Angle((45, 34, 12.23), unit='degree')
-```
-
-```{code-cell} ipython3
-Angle((5, 12, 12.23), unit='hourangle')
+Angle("5h12m12.23s")
 ```
 
 Pueden verse todos los formatos disponibles en [la documentación de astropy](https://docs.astropy.org/en/stable/api/astropy.coordinates.Angle.html)
@@ -49,5 +51,6 @@ Usando `Angle` las funciones matemáticas devuelven los resultados correctos:
 
 ```{code-cell} ipython3
 import numpy as np
-np.cos( Angle((60, 0, 0), unit='degree') )
+print("El valor del coseno de 60 grados es ")
+np.cos( Angle(60 * u.deg))
 ```
