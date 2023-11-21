@@ -20,7 +20,7 @@ parse:
     # - deflist
     - dollarmath
     # - html_admonition
-    # - html_image
+    - html_image
     - linkify
     # - replacements
     # - smartquotes
@@ -35,7 +35,8 @@ sphinx:
     language: es
     latex_elements:
         papersize: a4paper
-
+        preamble: |
+          \pgfplotsset{compat=1.18}
 
 repository:
   url: https://github.com/sergiopasra/ao-notebooks

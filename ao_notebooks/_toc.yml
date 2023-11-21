@@ -1,6 +1,6 @@
-format: jb-article
+format: jb-book
 root: index
-sections:
+chapters:
 - file: preamble
 - file: prob11
   sections:
