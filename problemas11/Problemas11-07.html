@@ -171,7 +171,6 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Uso de python</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../prob11.html">Problemas 1.1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Problemas11-01.html">Problema 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Problemas11-02.html">Problema 2</a></li>
@@ -451,9 +450,8 @@ document.write(`
 <section id="planteamiento">
 <h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Permalink to this heading">#</a></h2>
 <p>Este problema exige un cambio de coordenadas contrario del ejercicio 1, es decir: <strong>ecuatorial -&gt; eclíptico</strong>. Ambos sistemas de coordenadas comparte el origen de longitud y ascensión recta y el hecho de estar <em>orientados a derechas</em>. El cambio supone un solo giro entorno el eje <code class="docutils literal notranslate"><span class="pre">X</span></code></p>
-<div>
-<img src="../_static/p11/polareclipticaxis.png" width="500"/>
-</div><div class="cell docutils container">
+<p><img alt="polaraxis" src="../_images/polareclipticaxis.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
 <span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
@@ -500,9 +498,8 @@ document.write(`
 \cos \beta \cos \lambda = \cos \delta \cos \alpha \\
 \cos \beta \sin \lambda = \sin \delta \sin \epsilon + \cos \delta \cos \epsilon \sin \alpha
 \end{split}\]</div>
-<div>
-<img src="../_static/p11/polarecliptic.png" width="500"/>
-</div><div class="cell docutils container">
+<p><img alt="polarecliptic" src="../_images/polarecliptic.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sin_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">eps</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">eps</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ra</span><span class="p">)</span>
 </pre></div>

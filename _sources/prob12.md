@@ -1,4 +1,4 @@
-# Problemas 1.2
+## Problemas 1.2
 
 Considerar la oblicuidad de la eclíptica ε = 23º 26’ 12’’
 

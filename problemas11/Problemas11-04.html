@@ -171,7 +171,6 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Uso de python</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../prob11.html">Problemas 1.1</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Problemas11-01.html">Problema 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Problemas11-02.html">Problema 2</a></li>
@@ -462,9 +461,8 @@ document.write(`
 <p>Los problemas de cambio de coordenadas exigen pasar, normalmente, a través de varios sistemas.</p>
 <p>En este caso tenemos <strong>ecuatorial -&gt; horario -&gt; horizontal</strong>.</p>
 <p>Siempre es conveniente tener cierta idea de la configuración de la esfera celeste para nuestro ejemplo. En este caso nos encontramos en el hemisferio norte, con lo que los objetos que culminen lo harán en la parte sur del meridiano del observador. Además, la estrella tiene declinación positiva, así que se encontrará entre el <strong>ecuador celeste y polo norte</strong>.</p>
-<div>
-<img src="../_static/p11/spherecardinalpoints.png" width="500"/>
-</div><section id="ecuatorial-a-horario">
+<p><img alt="sphere1" src="../_images/spherecardinalpoints.png" /></p>
+<section id="ecuatorial-a-horario">
 <h3>Ecuatorial a horario<a class="headerlink" href="#ecuatorial-a-horario" title="Permalink to this heading">#</a></h3>
 <p>El cambio de coordenas ecuatoriales a horarias es simplemente:</p>
 <p><code class="docutils literal notranslate"><span class="pre">TSL</span> <span class="pre">=</span> <span class="pre">RA</span> <span class="pre">+</span> <span class="pre">HA</span></code></p>
@@ -616,9 +614,8 @@ y = \cos \delta \sin H\\
 z = \sin \delta
 \)</span></p>
 <p>Nótese que este sistema de coordenadas está orientado según la regla de la mano izquierda, con el eje <code class="docutils literal notranslate"><span class="pre">x</span></code> hacia el sur , el <code class="docutils literal notranslate"><span class="pre">y</span></code> hacia el oeste y el <code class="docutils literal notranslate"><span class="pre">z</span></code> hacia el cenit. El ángulo <code class="docutils literal notranslate"><span class="pre">H</span></code> se incrementa en el sentido de las agujas del reloj.</p>
-<div>
-<img src="../_static/p11/sphereaxis.png" width="500"/>
-</div><div class="cell docutils container">
+<p><img alt="sphereaxis" src="../_images/sphereaxis.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos_dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>
 <span class="n">sin_dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>

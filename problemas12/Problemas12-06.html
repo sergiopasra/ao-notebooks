@@ -171,7 +171,6 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Uso de python</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prob11.html">Problemas 1.1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../problemas11/Problemas11-01.html">Problema 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../problemas11/Problemas11-02.html">Problema 2</a></li>
@@ -449,11 +448,12 @@ document.write(`
 <section id="planteamiento">
 <h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Permalink to this heading">#</a></h2>
 <p>Para el Sol, sabemos que la latitud eclíptica es 0°. Como sabemos la longitud eclíptica podemos calcular las coordenadas ecuatoriales:</p>
-<p>\begin{eqnarray}
-\sin \delta_{\odot} &amp; = &amp; \sin \epsilon \sin l_{\odot}\
-\cos \delta_{\odot} \cos \alpha_{\odot} &amp; = &amp; \cos l_{\odot} \
-\cos \delta_{\odot} \sin \alpha_{\odot} &amp; = &amp; \cos \epsilon \sin l_{\odot}
-\end{eqnarray}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sin \delta_{\odot} =  \sin \epsilon \sin l_{\odot} \\
+\cos \delta_{\odot} \cos \alpha_{\odot}  =  \cos l_{\odot} \\
+\cos \delta_{\odot} \sin \alpha_{\odot}  =  \cos \epsilon \sin l_{\odot}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>

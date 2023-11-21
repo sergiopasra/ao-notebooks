@@ -171,7 +171,6 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Uso de python</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../prob11.html">Problemas 1.1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../problemas11/Problemas11-01.html">Problema 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../problemas11/Problemas11-02.html">Problema 2</a></li>
@@ -460,9 +459,7 @@ document.write(`
 <p>El acimut del Sol en el orto será:</p>
 <div class="math notranslate nohighlight">
 \[\cos A_{\odot} = - \sin \delta_{\odot} \sec \phi = - \sin \epsilon \sec \epsilon = -\tan \epsilon\]</div>
-<div>
-<img src="../_static/p12/solsticio.png" width="500"/>
-</div>
+<p><img alt="solsticio" src="../_images/solsticio.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
@@ -489,9 +486,7 @@ document.write(`
 \)</span></p>
 <p>Los valores obtenidos serán para el orto o el ocaso, dependiendo de sus posiciones.</p>
 <p>Nótese que el coseno tiene el mismo signo en el primer y cuarto cuadrante (positivo) y en el segundo y tercero (negativo). Los signos indican que el orto y el ocaso pueden producirse en el primer y cuarto cuadrante o bien en el segundo y tercero.</p>
-<div>
-<img src="../_static/p12/solsticio2.png" width="500"/>
-</div>
+<p><img alt="solsticio2" src="../_images/solsticio2.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos_A</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">ε</span><span class="p">)</span>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Uso de python &#8212; Ejercicios de Astronomia Observacional</title>
+    <title>&lt;no title&gt; &#8212; Ejercicios de Astronomia Observacional</title>
   
   
   
@@ -170,8 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Uso de python</a></li>
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="prob11.html">Problemas 1.1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="problemas11/Problemas11-01.html">Problema 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="problemas11/Problemas11-02.html">Problema 2</a></li>
@@ -423,7 +422,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -434,11 +435,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Uso de python</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -448,8 +457,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="uso-de-python">
-<h1>Uso de python<a class="headerlink" href="#uso-de-python" title="Permalink to this heading">#</a></h1>
+  <p>
+</p>
 <p>Los problemas presentados a continuación están resueltos utilizando Python
 con la ayuda de una serie de paquetes adicionales, como <code class="docutils literal notranslate"><span class="pre">numpy</span></code> o <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <p>En particular se utiliza <code class="docutils literal notranslate"><span class="pre">astropy</span></code> para facilitar el manejo de ángulos
@@ -479,28 +488,11 @@ creando un objeto con grados minutos y segundos:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Angle</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mf">12.23</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;5h12m12.23s&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: AstropyDeprecationWarning: dms_to_degrees (or creating an Angle with a tuple) has ambiguous behavior when the degree value is 0. Use another way of creating angles instead (e.g. a less ambiguous string like &#39;-0d1m2.3s&#39;). [astropy.coordinates.angles]
-</pre></div>
-</div>
-<div class="output text_latex math notranslate nohighlight">
-\[45^\circ34{}^\prime12.23{}^{\prime\prime}\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Angle</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">12.23</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;hourangle&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: AstropyDeprecationWarning: hms_to_hours (or creating an Angle with a tuple) has ambiguous behavior when the hour value is 0. Use another way of creating angles instead (e.g. a less ambiguous string like &#39;-0h1m2.3s&#39;). [astropy.coordinates.angles]
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[5^{\mathrm{h}}12^{\mathrm{m}}12.23^{\mathrm{s}}\]</div>
 </div>
@@ -510,16 +502,19 @@ creando un objeto con grados minutos y segundos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span> <span class="n">Angle</span><span class="p">((</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor del coseno de 60 grados es &quot;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor del coseno de 60 grados es 
+</pre></div>
+</div>
 <div class="output text_latex math notranslate nohighlight">
 \[0.5 \; \mathrm{}\]</div>
 </div>
 </div>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -575,6 +570,20 @@ creando un objeto con grados minutos y segundos:</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
