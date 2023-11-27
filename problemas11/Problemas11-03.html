@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="es" >
+<html lang="es" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -142,6 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -388,6 +389,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -397,6 +399,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -428,7 +431,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento">Planteamiento</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento">Planteamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento-alternativo">Planteamiento alternativo</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordenadas-horizontales">Coordenadas horizontales</a></li>
 </ul>
 </li>
@@ -449,18 +453,15 @@ document.write(`
 cenital es de 80° para un observador de latitud 57° N.</p>
 <section id="planteamiento">
 <h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Permalink to this heading">#</a></h2>
-<p>En este cambio de coordenadas, no conocemos las dos coordenadas horarias (<span class="math notranslate nohighlight">\(\delta\)</span>, H), sino solamente una de ellas. Sí que conocemos la distancia cenital (altura).</p>
+<p>Tendremos dos valores del acimut que cumplen las condiciones dadas, uno antes de que la estrella culmine y otro después. Utilizamos las ecuaciones de transformación de horizontales a horarias (solamente hace falta la primera ecuación).</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\sin a = \sin \phi \sin \delta  + \cos \phi \cos \delta \cos H  \\
-\cos a \sin A = \cos \delta \sin H \\
-\cos a \cos A = -\cos \phi \sin \delta + \sin \phi \cos \delta \cos H
-\end{split}\]</div>
-<p>De la primera ecuación despejamos <span class="math notranslate nohighlight">\(\cos H\)</span>.</p>
+\[
+\sin \delta = \sin \phi \sin a  - \cos \phi \cos a \cos A
+\]</div>
+<p>Despejamos <span class="math notranslate nohighlight">\(\cos A\)</span> como:</p>
 <p><span class="math notranslate nohighlight">\(
-\cos H  = \frac{(\sin a - \sin \phi \sin \delta )}{\cos \phi \cos \delta}
+\cos A  = \frac{(\sin \phi \sin a -\sin \delta)}{\cos \phi \cos a}
 \)</span></p>
-<p>Y utilizamos el valor de H para obtener A</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
@@ -489,6 +490,54 @@ cenital es de 80° para un observador de latitud 57° N.</p>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># coseno del ángulo horario</span>
+<span class="n">cos_A</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dec</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dado que nos piden dos ángulos, podemos utilizar <code class="docutils literal notranslate"><span class="pre">arccos</span></code> directamente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># La primera solución es</span>
+<span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_A</span><span class="p">)</span>
+<span class="c1"># La segunda es 360 grados - A1</span>
+<span class="n">A2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">A1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A1=&#39;</span><span class="p">,</span> <span class="n">Angle</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A2=&#39;</span><span class="p">,</span> <span class="n">Angle</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A1= 83d44m26.9s
+A2= 276d15m33.1s
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="planteamiento-alternativo">
+<h2>Planteamiento alternativo<a class="headerlink" href="#planteamiento-alternativo" title="Permalink to this heading">#</a></h2>
+<p>Podemos utilizar otras transformaciones, en varios pasos, pero que llegan al mismo resultado</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sin a = \sin \phi \sin \delta  + \cos \phi \cos \delta \cos H  \\
+\cos a \sin A = \cos \delta \sin H \\
+\cos a \cos A = -\cos \phi \sin \delta + \sin \phi \cos \delta \cos H
+\end{split}\]</div>
+<p>De la primera ecuación despejamos <span class="math notranslate nohighlight">\(\cos H\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(
+\cos H  = \frac{(\sin a - \sin \phi \sin \delta )}{\cos \phi \cos \delta}
+\)</span></p>
+<p>Y utilizamos el valor de H para obtener A</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># coseno del ángulo horario</span>
@@ -542,6 +591,12 @@ Utilizamos las ecuaciones de transformación para obtener el acimut.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Como vamos a utilizar varias veces este valor, lo calculamos</span>
 <span class="n">cos_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos_a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.984807753012208
 </pre></div>
 </div>
 </div>
@@ -563,7 +618,7 @@ Utilizamos las ecuaciones de transformación para obtener el acimut.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ambos valores son positivos, luego el ángulo es del primer cuadrante&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;usamos arcotangente&#39;</span><span class="p">)</span>
 <span class="n">A1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">sin_A1</span> <span class="o">/</span> <span class="n">cos_A1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A1=&#39;</span><span class="p">,</span> <span class="n">A1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -573,7 +628,7 @@ seno 0.9940388634444958
 coseno 0.10902631774931744
 Ambos valores son positivos, luego el ángulo es del primer cuadrante
 usamos arcotangente
-1.4615528508974147 rad
+A1= 1.4615528508974147 rad
 </pre></div>
 </div>
 </div>
@@ -584,12 +639,12 @@ usamos arcotangente
 <span class="c1"># que arctan, pero devuelve directamente el ángulo</span>
 <span class="c1"># en el cuadrante correcto</span>
 <span class="n">A1</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">sin_A1</span><span class="p">,</span> <span class="n">cos_A1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A1=&#39;</span><span class="p">,</span> <span class="n">A1</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83.74080989173515
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A1= 83.74080989173515
 </pre></div>
 </div>
 </div>
@@ -604,7 +659,7 @@ usamos arcotangente
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Seno negativo y coseno positivo es el cuarto cuadrante&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;usamos arcotangente y sumamos 360&#39;</span><span class="p">)</span>
 <span class="n">A2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">sin_A2</span> <span class="o">/</span> <span class="n">cos_A2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A2=&#39;</span><span class="p">,</span><span class="n">A2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -614,52 +669,45 @@ seno -0.9940388634444959
 coseno 0.10902631774931705
 Seno negativo y coseno positivo es el cuarto cuadrante
 usamos arcotangente y sumamos 360
-276d15m33.08438975s
+A2= 276d15m33.08438975s
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esta funcion de python hace lo mismo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Otra manera de hacer lo mismo, válida en python y otros lenguajes</span>
+
+<span class="c1"># La función arctan2 hace lo mismo</span>
 <span class="c1"># que arctan, pero devuelve directamente el ángulo</span>
-<span class="c1"># en el cuadrante correcto</span>
+<span class="c1"># en el cuadrante correcto, pero entre -180 - 180 grados</span>
 <span class="c1"># Sumamos 360 para que el ángulo sea positivo</span>
 <span class="n">A2</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">sin_A2</span><span class="p">,</span> <span class="n">cos_A2</span><span class="p">))</span><span class="o">+</span> <span class="n">Angle</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A2</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A2=&#39;</span><span class="p">,</span> <span class="n">A2</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>276.2591901082648
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A2= 276.2591901082648
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A1=&#39;</span><span class="p">,</span> <span class="n">A1</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A1=&#39;</span><span class="p">,</span> <span class="n">A1</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A2=&#39;</span><span class="p">,</span> <span class="n">A2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A1= 83d44m26.91561025s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A1= 83d44m26.9s
+A2= 276d15m33.1s
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A2=&#39;</span><span class="p">,</span> <span class="n">A2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s1">&#39;degree&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A2= 276d15m33.08438975s
-</pre></div>
-</div>
-</div>
-</div>
+<p>El resultado es el mismo por ambos procedimientos</p>
 </section>
 </section>
 </section>
@@ -692,7 +740,7 @@ usamos arcotangente y sumamos 360
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="Problemas11-02.html"
@@ -727,7 +775,8 @@ usamos arcotangente y sumamos 360
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento">Planteamiento</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento">Planteamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planteamiento-alternativo">Planteamiento alternativo</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordenadas-horizontales">Coordenadas horizontales</a></li>
 </ul>
 </li>
@@ -752,6 +801,7 @@ Por Sergio Pascual
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright Universidad Complutense de Madrid, 2020-2023.
@@ -778,8 +828,8 @@ Por Sergio Pascual
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
