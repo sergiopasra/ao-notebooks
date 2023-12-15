@@ -478,7 +478,8 @@ coordenadas φ=42°52’31,8’’, longitud=0h34m14s W.</p>
 </section>
 <section id="calculo-de-la-epoca">
 <h3>Cálculo de la época<a class="headerlink" href="#calculo-de-la-epoca" title="Permalink to this heading">#</a></h3>
-<p>En primer lugar, calculamos la época en escala UT. Dado que tenemos su valor en UTC, solamente tenemos que introducir la diferencia UT1-UTC <span class="math notranslate nohighlight">\(t(\mathrm{UT}) = t(\mathrm{UTC}) + (\mathrm{UT1} - \mathrm{UTC})\)</span></p>
+<p>En primer lugar, calculamos la época en escala UT. Dado que tenemos su valor en UTC, solamente tenemos que introducir la diferencia UT1-UTC.
+<span class="math notranslate nohighlight">\(t(\mathrm{UT}) = t(\mathrm{UTC}) + (\mathrm{UT1} - \mathrm{UTC})\)</span></p>
 <p>Como <span class="math notranslate nohighlight">\((\mathrm{UT1} - \mathrm{UTC})\)</span> es pequeño (siempre menor que 1 segundo), suele ignorarse si no se conoce.</p>
 <p>Por lo tanto, la fecha en escala UT es 2019-09-20 03:20:17.847 UT1</p>
 </section>
@@ -519,8 +520,9 @@ coordenadas φ=42°52’31,8’’, longitud=0h34m14s W.</p>
 </div>
 </div>
 </div>
-<p>Como la feha es de 2019, un resultado cercano a 0.19 es razonable.
-Finalmente, calculamos el valor de GMST(0h UT). Recordemos que es un ángulo y que la ecuación que vamos a utilizar da un resultado en <strong>segundos angulares</strong>.</p>
+<p>Como la fecha es de 2019, un resultado cercano a 0.19 es razonable.
+Finalmente, calculamos el valor de GMST(0h UT). Recordemos que es un ángulo y que la ecuación que vamos a utilizar da un resultado en <strong>segundos angulares</strong>.
+Dividiremos el resultado entre 3600 para obtener horas angulares y finalmente lo reducieremos módulo 24.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GMST_0ut</span> <span class="o">=</span> <span class="mf">24110.54841</span> <span class="o">+</span> <span class="mf">8640184.812866</span> <span class="o">*</span> <span class="n">T</span> <span class="o">+</span> <span class="mf">0.093104</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.0000062</span> <span class="o">*</span> <span class="n">T</span><span class="o">**</span><span class="mi">3</span>
@@ -547,7 +549,7 @@ GMST(0h UT): 23.915816025837216 h
 </section>
 <section id="calculo-de-gmst-t">
 <h3>Cálculo de GMST(t)<a class="headerlink" href="#calculo-de-gmst-t" title="Permalink to this heading">#</a></h3>
-<p>En un día, tenemos:</p>
+<p>Para un día cualquiera, la siguiente relación es válida:</p>
 <div class="math notranslate nohighlight">
 \[ 
 \mathrm{GMST}(t) = \mathrm{GMST}(\mathrm{0h TU}) + 1.0027379091 \,(t - \mathrm{0h TU})
@@ -593,7 +595,7 @@ GMST(t): 3.26324679602158 h
 </section>
 <section id="calculo-de-lst-t">
 <h3>Cálculo de LST(t)<a class="headerlink" href="#calculo-de-lst-t" title="Permalink to this heading">#</a></h3>
-<p>Finalmente, sumamos la longitud. Al se una longitud oeste, es positiva.
+<p>Finalmente, sumamos la longitud. Al ser una longitud oeste, es positiva.
 Los valores en horas, minutos y segundos son:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
