@@ -1,6 +1,6 @@
 
 
-Astronomía Observacional, curso 2022-2023
+Astronomía Observacional, curso 2024-2025
 
 ## Problemas 1.1
 
