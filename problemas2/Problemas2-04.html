@@ -439,7 +439,7 @@
 <h1>Problema 4<a class="headerlink" href="#problema-4" title="Link to this heading">#</a></h1>
 <p>Se han obtenido los siguientes datos observacionales de una estrella:</p>
 <ul class="simple">
-<li><p>mediante un fotómetro se determinó que mv= 2.5;</p></li>
+<li><p>mediante un fotómetro se determinó que mᵥ= 2.5;</p></li>
 <li><p>mediante análisis espectroscópico se determinó un máximo en el contínuo de la radiación estelar en 400 nm</p></li>
 <li><p>el desplazamiento aparente observado sobre el fondo del cielo durante un año permitió deducir para la paralaje un valor de 174 mas</p></li>
 <li><p>mediante un interferómetro de intensidad se obtuvo un radio angular de 1 mas.</p></li>
@@ -563,7 +563,7 @@ Luminosidad es 1.45e+27 W
 <p>La magnitud absoluta visual la obtenemos usando el módulo de distancia</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d_pc</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">pc</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="c1"># Valor numérico de la distancia es parcsec</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d_pc</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">pc</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="c1"># Valor numérico de la distancia en parsec</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distancia es </span><span class="si">{</span><span class="n">d_pc</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">Mv</span> <span class="o">=</span> <span class="n">mv</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">d_pc</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Magnitud absoluta visual es </span><span class="si">{</span><span class="n">Mv</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
