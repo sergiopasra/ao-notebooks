@@ -437,7 +437,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="problema-4">
 <h1>Problema 4<a class="headerlink" href="#problema-4" title="Link to this heading">#</a></h1>
-<p>Calcular la relación señal/ruido (S/N) de observaciones fotométricas realizadas con un detector CCD tras obtener el flujo en una apertura de 50 pix<span class="math notranslate nohighlight">\(^2\)</span>. La señal total de la estrella en la apertura es de 30000 ADU (1 ADU = 5 e- para este CCD), el nivel de fondo de cielo es de 1000 ADU por pixel y el ruido de lectura es de 5 ADU.</p>
+<p>Calcular la relación señal/ruido (SNR) de observaciones fotométricas realizadas con un detector CCD tras obtener el flujo en una apertura de 50 pix<span class="math notranslate nohighlight">\(^2\)</span>. La señal total de la estrella en la apertura es de 30000 ADU (1 ADU = 5 e- para este CCD), el nivel de fondo de cielo es de 1000 ADU por pixel y el ruido de lectura es de 5 ADU.</p>
 <p>Considerar ya sustraído el nivel de pedestal y que la determinación del cielo tiene un error despreciable.</p>
 <section id="planteamiento">
 <h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Link to this heading">#</a></h2>
@@ -446,7 +446,7 @@
 \[
 \mathrm{SNR}(\mathrm{O}) = \frac{ N_{\mathrm{O}} }{\sqrt{\frac{1}{g} N_{\mathrm{O+C}} + A\left(\frac{\sigma_{R}}{g}\right)^2}} =  \frac{ N_{\mathrm{O}} }{\sqrt{\frac{1}{g} N_{\mathrm{O}} + \frac{1}{g} A N_{\mathrm{C}} + A\left(\frac{\sigma_{R}}{g}\right)^2}}
 \]</div>
-<p>Simplemente tenemos que identificar los términos. En la anterior ecuación <span class="math notranslate nohighlight">\(\sigma_{R}\)</span> está medida en electrones, luego <span class="math notranslate nohighlight">\(\sigma_{R}/g\)</span> está medida en ADUSs.</p>
+<p>Simplemente tenemos que identificar los términos. En la anterior ecuación <span class="math notranslate nohighlight">\(\sigma_{R}\)</span> está medida en electrones, luego <span class="math notranslate nohighlight">\(\sigma_{R}/g\)</span> está medida en ADU.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>

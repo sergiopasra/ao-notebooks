@@ -438,11 +438,11 @@
   <section class="tex2jax_ignore mathjax_ignore" id="problema-1">
 <h1>Problema 1<a class="headerlink" href="#problema-1" title="Link to this heading">#</a></h1>
 <p>Adoptando para un lugar de observación el siguiente valor para el parámetro de Fried: <span class="math notranslate nohighlight">\(r_0(\lambda_0=0.5\mu m) = 10 \ \mathrm{cm}\)</span> y su dependencia habitual con la longitud de onda, ¿cuál será el <em>seeing</em> con el que se observaría en el óptico (λ = 500 nm) y el infrarrojo cercano, (λ = 2.0 μm)?</p>
-<p>Determinar a que longitud de onda la difracción comienza a dominar para un telescopio de diámetro D = 2 m.</p>
+<p>Determinar a qué longitud de onda la difracción comienza a dominar para un telescopio de diámetro D = 2 m.</p>
 <section id="planteamiento">
 <h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Link to this heading">#</a></h2>
 <p>En condiciones de turbulencia, el parámetro que determina el tamaño del perfil de <em>seeing</em> es  el parámetro de Fried, <span class="math notranslate nohighlight">\(r_0 \propto \lambda^{6/5} \)</span>.</p>
-<p>La anchura a media altura del perfil de <em>seeing</em> es <span class="math notranslate nohighlight">\( \mathrm{FWHM} = 0.976 \ \lambda / r_0\)</span>.</p>
+<p>La anchura a media altura del perfil de <em>seeing</em> (en radianes) es <span class="math notranslate nohighlight">\( \mathrm{FWHM} = 0.976 \ \lambda / r_0\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -454,7 +454,9 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r0_optico</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usando un módulo de conversión de unidades</span>
+<span class="c1"># porporcionado por astropy</span>
+<span class="n">r0_optico</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span>
 <span class="n">wl_optico</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">micron</span>
 <span class="n">wl_nir</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">micron</span>
 <span class="n">r0_nir</span> <span class="o">=</span> <span class="n">r0_optico</span> <span class="o">*</span> <span class="p">(</span><span class="n">wl_nir</span> <span class="o">/</span> <span class="n">wl_optico</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">6</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
@@ -498,7 +500,7 @@ seeing nir (arcsec) 0.76
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Seeing </span>
 <span class="c1"># en el óptico</span>
-<span class="c1"># Lo mismo pero con vonersión automática de unidades</span>
+<span class="c1"># Lo mismo pero con conversión automática de unidades</span>
 <span class="n">fwhm_optico</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.976</span> <span class="o">*</span> <span class="n">wl_optico</span> <span class="o">/</span> <span class="n">r0_optico</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">arcsec</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_angles</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;seeing optico (arcsec) </span><span class="si">{</span><span class="n">fwhm_optico</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 

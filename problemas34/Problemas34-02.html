@@ -440,8 +440,8 @@
 <p>El telescopio William Herschel (WHT) del Observatorio del Roque de Los Muchachos (La Palma) tiene un diámetro de 4.2 m y una relación focal f = 10.94 en el foco Cassegrain.</p>
 <p>Calcular:</p>
 <ul class="simple">
-<li><p>Las dimensiones mínimas que debe tener un detector acoplado al foco Cassegrain para poder obtener una imagen completa de una galaxia de 1´x 2´de tamaño aparente.</p></li>
-<li><p>¿Qué tamaño debe tener cada pixel del detector utilizado para no perder resolución espacial si el seeing es de 0.5´´?</p></li>
+<li><p>Las dimensiones mínimas que debe tener un detector acoplado al foco Cassegrain para poder obtener una imagen completa de una galaxia de 1′x 2′ de tamaño aparente.</p></li>
+<li><p>¿Qué tamaño debe tener cada pixel del detector utilizado para no perder resolución espacial si el seeing es de 0.5″?</p></li>
 <li><p>Si se observa en el IR ¿necesitaríamos modificar algún parámetro del detector?</p></li>
 </ul>
 <section id="planteamiento">
@@ -488,7 +488,7 @@ Conversión de unidades: 4.489092153022904 arcsec / mm
 </div>
 </div>
 </div>
-<p>La escala de placa permite convertir distancias en el plano focal (o en el detector, que se situa en el plano focal) en ángulos en el cielo.</p>
+<p>La escala de placa permite convertir distancias en el plano focal (o en el detector, que se sitúa en el plano focal) en ángulos en el cielo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Para cubrir un 1&#39;x 2&#39;</span>
@@ -508,7 +508,7 @@ Lado B 26.73146282354515 mm
 </div>
 </div>
 </div>
-<p>Ahora utilizamos el criterio de buen muestro de imágenes. Para no perder resolución, la FWHM tiene que ser muestreada con 2 pixels (o 3 si somos conservadores).</p>
+<p>Ahora utilizamos el criterio de buen muestro de imágenes. Para no perder resolución, la FWHM del seeing tiene que ser muestreada con 3 pixels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seeing_fwhm</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span>
@@ -528,7 +528,7 @@ El tamaño de estos pixels es 37.13 micron
 </div>
 </div>
 <p>Para el IR, el seeing será menor, luego necesitaremos pixels más pequeños si queremos muestrear bien con mejor resolución.</p>
-<p>Por ejemplo, con un seeing de 0.35””:</p>
+<p>Por ejemplo, con un seeing de 0.35″:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seeing_fwhm</span> <span class="o">=</span> <span class="mf">0.35</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">arcsec</span>

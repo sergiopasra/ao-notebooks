@@ -436,7 +436,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="problema-5">
 <h1>Problema 5<a class="headerlink" href="#problema-5" title="Link to this heading">#</a></h1>
-<p>El flujo neto medido para una estrella es de 40 cuentas/s con un cierto telescopio e instrumento CCD, empleando un filtro estrecho Δλ = 1 nm. Determinar la relación señal-ruido (S/N) para una observación de una estrella 2 magnitudes más débil que se observe con un telescopio del doble de diámetro y el mismo instrumento durante un tiempo de exposición de 90 s y con un filtro centrado en la misma longitud de onda pero con Δλ = 2 nm.</p>
+<p>El flujo neto medido para una estrella es de 40 cuentas/s con un cierto telescopio e instrumento CCD, empleando un filtro estrecho Δλ = 1 nm. Determinar la relación señal-ruido (SNR) para una observación de una estrella 2 magnitudes más débil que se observe con un telescopio del doble de diámetro y el mismo instrumento durante un tiempo de exposición de 90 s y con un filtro centrado en la misma longitud de onda pero con Δλ = 2 nm.</p>
 <p>Suponer que el espectro del objeto es aproximadamente plano dentro de los filtros.</p>
 <p>Suponer además, que la ganancia g=1, que el nivel de pedestal ha sido sustraído y que el ruido de lectura y la contribución del cielo son despreciables.</p>
 <section id="planteamiento">
@@ -486,17 +486,17 @@ n2 6.3395727698444535 ADU/s
 </div>
 <p>Recordar que el número de fotones dentro de una cierta banda con transmisión T es proporcional a:</p>
 <div class="math notranslate nohighlight">
-\[N \propto \int \mathrm{d}\lambda \, \frac{f_{\lambda}}{h c / \lambda} T(\lambda) \]</div>
+\[N \propto \int \mathrm{d}\lambda \, \frac{e_{\lambda}}{h c / \lambda} T(\lambda) \]</div>
 <p>Si el filtro es cuadrado y estrecho, podemos aproximar la integral por</p>
 <div class="math notranslate nohighlight">
-\[\Delta \lambda \, \frac{f_{\lambda}}{h c / \lambda_0}\]</div>
+\[$$N \propto \Delta \lambda \, \frac{e_{\lambda}}{h c / \lambda_0}\]</div>
 <p>Si los filtros están centrados en la misma longitud de onda, pero tienen anchuras diferentes, tendremos que:</p>
 <div class="math notranslate nohighlight">
 \[\frac{N_1}{N_2} = \frac{\Delta \lambda_1}{\Delta \lambda_2}\]</div>
 <p>Para el objeto problema, el número de cuentas será proporcional al tiempo, a la razón de áreas de los telescopios y la razón de anchos de los filtros, que son los factores que hacen que lleguen más fotones al detector.</p>
 <div class="math notranslate nohighlight">
 \[\frac{N_1}{N_2} = \frac{D_1^2}{D_2^2}\frac{t_1}{t_2} \frac{\Delta \lambda_1}{\Delta \lambda_2}\]</div>
-<p>finalmente, en nuestro caso nos dan el número de cuentas por segundo <span class="math notranslate nohighlight">\(n_2\)</span> en lugar de <span class="math notranslate nohighlight">\(N_2\)</span>. Despejamos:</p>
+<p>Finalmente, en nuestro caso nos dan el número de cuentas por segundo <span class="math notranslate nohighlight">\(n_2\)</span> en lugar de <span class="math notranslate nohighlight">\(N_2\)</span>. Despejamos:</p>
 <div class="math notranslate nohighlight">
 \[N_1  = \frac{N_2}{t_2} \frac{D_1^2}{D_2^2} \frac{\Delta \lambda_1}{\Delta \lambda_2} t_1 = n_2 \frac{D_1^2}{D_2^2} \frac{\Delta \lambda_1}{\Delta \lambda_2} t_1\]</div>
 <div class="cell docutils container">

@@ -438,7 +438,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="problema-3">
 <h1>Problema 3<a class="headerlink" href="#problema-3" title="Link to this heading">#</a></h1>
 <p>Se dispone de un detector CCD de 2048 × 2048 píxeles de 15 μm.</p>
-<p>Determinar el campo registrado con un telescopio de focal F = 6 m y el número de exposiciones necesarias para cubrir un campo de 100×100 arcmin2 mediante un mosaico de imágenes.</p>
+<p>Determinar el campo registrado con un telescopio de focal F = 6 m y el número de exposiciones necesarias para cubrir un campo de 100×100 arcmin² mediante un mosaico de imágenes.</p>
 <p>Si con este detector acoplado a un telescopio se obtienen un total de 2000 cuentas al observar una estrella durante 1000 segundos, ¿cuántas cuentas se obtendrían al observar una estrella 1 magnitud más débil y con un telescopio del doble de diámetro durante el mismo tiempo?</p>
 <section id="planteamiento">
 <h2>Planteamiento<a class="headerlink" href="#planteamiento" title="Link to this heading">#</a></h2>
@@ -546,36 +546,37 @@ Número de exposiciones: 33
 </div>
 </div>
 </div>
-<p>El número de fotones o el número de cuentas (ignorando el bias) es proporcional al tiempo de exposición y proporcional al área colectora. El área colectora es proporcional al cuadrado del diámetro del primario.</p>
-<p>Si de la estrella 1 recibimos <span class="math notranslate nohighlight">\(n_1 = N_1 / t\)</span> cuentas, de la estrella 2 (1 mag más débil) recibiremos <span class="math notranslate nohighlight">\(n_2\)</span>.</p>
+<p>El número de cuentas digitales es proporcional al número de fotones (ignorando el nivel de pedestal), que a su vez es proporcional al tiempo de exposición y proporcional al área colectora. El área colectora es (generalmente) proporcional al cuadrado del diámetro del espejo primario.</p>
+<p>Si de la estrella A recibimos <span class="math notranslate nohighlight">\(n_A = N_A / t\)</span> cuentas por unidad de tiempo, de la estrella B (1 mag más débil) recibiremos <span class="math notranslate nohighlight">\(n_B\)</span>.</p>
 <p><em>Recordar que 1 magnitud más débil significa que <span class="math notranslate nohighlight">\(m_2 = m_1 + 1\)</span></em></p>
-<p><span class="math notranslate nohighlight">\( \Delta m = m_1 - m_2 = -2.5 log (n_1 / n_2) \)</span></p>
+<p><span class="math notranslate nohighlight">\( \Delta m = m_A - m_B = -2.5 log (n_A / n_B) \)</span></p>
 <p>de donde:</p>
-<p><span class="math notranslate nohighlight">\( n_2 = n_1 10^{0.4 \Delta m} \)</span></p>
+<p><span class="math notranslate nohighlight">\( n_B = n_A 10^{0.4 \Delta m} \)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Si de la estrella 1 recibimos N / t cuentas, de la estrella 2 (1 mag más débil) recibiremos</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Si de la estrella A recibimos N / t cuentas por segundo,</span>
+<span class="c1"># de la estrella B (1 mag más débil) recibiremos</span>
 <span class="n">delta_m</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span>
 <span class="n">NA</span> <span class="o">=</span> <span class="mf">2000.0</span>
 <span class="n">texp</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">na</span> <span class="o">=</span> <span class="n">NA</span> <span class="o">/</span> <span class="n">texp</span>
-<span class="n">nb</span> <span class="o">=</span> <span class="n">na</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">*</span> <span class="n">delta_m</span><span class="p">)</span>
+<span class="n">nA</span> <span class="o">=</span> <span class="n">NA</span> <span class="o">/</span> <span class="n">texp</span>
+<span class="n">nB</span> <span class="o">=</span> <span class="n">nA</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">*</span> <span class="n">delta_m</span><span class="p">)</span>
 
-<span class="n">NB</span> <span class="o">=</span> <span class="n">nb</span> <span class="o">*</span> <span class="n">texp</span>
+<span class="n">NB</span> <span class="o">=</span> <span class="n">nB</span> <span class="o">*</span> <span class="n">texp</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total NA&#39;</span><span class="p">,</span> <span class="n">NA</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total NB&#39;</span><span class="p">,</span> <span class="n">NB</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cuentas estrella A&#39;</span><span class="p">,</span> <span class="n">NA</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cuentas estrella B&#39;</span><span class="p">,</span> <span class="n">NB</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total NA 2000.0
-Total NB 796.2143411069944
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cuentas estrella A 2000.0
+Cuentas estrella B 796.2143411069944
 </pre></div>
 </div>
 </div>
 </div>
-<p>Si el tiempo de exposición y otros factores se mantienen constantes, entre dos telescopios la razón del número de cuentas (descontando el bias) será igual a la razón de las áreas colectoras, que en general se puede considerar proporcional al diámetro de M1.</p>
+<p>Si el tiempo de exposición y otros factores se mantienen constantes, entre dos telescopios la razón del número de cuentas (descontando el bias) será igual a la razón de las áreas colectoras, que en general se puede considerar proporcional al diámetro del espejo primario M1.</p>
 <p><span class="math notranslate nohighlight">\(\frac{N_{T1}}{N_{T2}} = \frac{A_{T1}}{A_{T2}} = \left(\frac{D_{T1}}{D_{T2}}\right)^2\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
