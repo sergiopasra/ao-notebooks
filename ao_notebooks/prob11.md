@@ -1,8 +1,8 @@
 
 
-Astronomía Observacional, curso 2024-2025
+Astronomía Observacional, curso 2025-2026
 
-## Problemas 1.1
+# Tema 1.1
 
 1. Asumiendo que la Tierra es una esfera de radio medio 6371 km, calcular la distancia
 (geodésica) entre Moscú (55°45′21″N 37°37′04″E) y Nairobi (1°17′11″S 36°49′02″E).

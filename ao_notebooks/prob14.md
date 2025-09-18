@@ -1,4 +1,4 @@
-# Problemas 1.4
+# Tema 1.4
 
 1. El periodo sidéreo de Mercurio es de 88 días. Calcular su periodo sinódico. Considerar el
 periodo sidéreo de la Tierra como 365.25 días.

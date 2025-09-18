@@ -18,6 +18,8 @@ kernelspec:
 {raw-latex}`\section*{Uso de Python}`
 {raw-latex}`\addcontentsline{toc}{chapter}{Uso de Python}`
 
+# Uso de Python
+
 
 Los problemas presentados a continuación están resueltos utilizando Python
 con la ayuda de una serie de paquetes adicionales, como `numpy` o `matplotlib`.

@@ -1,4 +1,4 @@
-# Problemas 1.3
+# Tema 1.3
 
 1. Calcular la fecha juliana del 27 de febrero de 2007
 

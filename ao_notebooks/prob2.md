@@ -1,4 +1,4 @@
-# Problemas 2
+# Tema 2
 
 **2.1** La magnitud visual de la estrella Deneb (α Cyg) es de 1.33 y la de Sirio (α CMa) es de -1.58. ¿Cuántas veces más brillante que Sirio se observaría Deneb si estuviesen a la misma distancia de la Tierra qie Sirio? 
 

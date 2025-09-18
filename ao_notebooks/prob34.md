@@ -1,4 +1,4 @@
-# Problemas 3 y 4
+# Temas 3 y 4
 
 **3.1** Adoptando para un lugar de observación el siguiente valor para el parámetro de Fried: $r_0(\lambda_0=0.5\mu m) = 10 \ \mathrm{cm}$ y su dependencia habitual con la longitud de onda, ¿cuál será el *seeing* con el que se observaría en el óptico (λ = 500 nm) y el infrarrojo cercano, (λ = 2.0 μm)? 
 

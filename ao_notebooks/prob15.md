@@ -1,4 +1,4 @@
-# Problemas 1.5
+# Tema 1.5
 
 1. Calcular el ángulo del horizonte para un acantilado de 200 m de altura.
 
