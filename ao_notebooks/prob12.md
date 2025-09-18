@@ -16,3 +16,7 @@ horizonte varía entre aproximadamente 10h33m y 13h26m
 54°55’ cuando la longitud eclíptica del Sol es 49°49’
 7. Calcular la duración del verano (en días) sabiendo que la ecuación del tiempo vale -1m27s
 en el solsticio de verano y 7m20s en el equinoccio de otoño.
+8. Calcular la duración del crepúsculo astronómico en minutos, en un lugar de latitud φ =
+37° 20’ y cuando el Sol tiene declinación -2°. Considerar que el Sol recorre 24 horas de 
+ángulo horario en 24 horas de tiempo.
+
