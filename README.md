@@ -4,8 +4,11 @@
 
 # Astronomy notebooks
 
-This collection of astronomy exercises, notes, figures and educational materials
-is licensed under the Creative Commons Attribution-ShareAlike 4.0 International
-License (CC BY-SA 4.0).
+Unless otherwise stated, the educational content of this repository
+(text, explanations, exercises, figures and images) is licensed under
+the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
 
-The code used to build and generate this Jupyter Book is licensed under the MIT License.
+Code examples contained in the notebooks are licensed under the MIT License.
+
+The code used to build and generate this Jupyter Book is also licensed
+under the MIT License.
