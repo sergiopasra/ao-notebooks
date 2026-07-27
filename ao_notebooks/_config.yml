@@ -40,7 +40,7 @@ sphinx:
 
 html:
   extra_footer: |
-    <p> Bajo licencia <a href="reativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0 </a>.  </p>
+    <p> Bajo licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0</a> </p>
 
 repository:
   url: https://github.com/sergiopasra/ao-notebooks
