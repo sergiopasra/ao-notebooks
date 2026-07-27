@@ -1,9 +1,9 @@
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
+# Learn more at https://jupyterbook.org/v1/customize/config.html
 
 title: Ejercicios de Astronomia Observacional
 author: Sergio Pascual
-copyright: "Universidad Complutense de Madrid, 2020-2025"
+copyright: "Universidad Complutense de Madrid, 2020-2026"
 logo: images/ucm_logo.png
 
 only_build_toc_files: true
@@ -37,6 +37,10 @@ sphinx:
         papersize: a4paper
         preamble: |
           \pgfplotsset{compat=1.18}
+
+html:
+  extra_footer: |
+    <p> Bajo licencia <a href="reativecommons.org/licenses/by-sa/4.0/ CC BY-SA 4.0 </a>.  </p>
 
 repository:
   url: https://github.com/sergiopasra/ao-notebooks
