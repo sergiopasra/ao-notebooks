@@ -1,6 +1,6 @@
 
 
-Astronomía Observacional, curso 2025-2026
+Astronomía Observacional, curso 2026-2027
 
 # Tema 1.1
 
