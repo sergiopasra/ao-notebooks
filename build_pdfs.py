@@ -1,12 +1,16 @@
-"""Build one PDF per chapter (tema) of the book.
+"""Build one PDF per tema of the book.
+
+Chapters are grouped by the title of their first heading, dropping the
+subsection number: 'Tema 1.1', 'Tema 1.2'... go together in 'Tema 1'.
 
 Usage:
-    python build_pdfs.py            # all chapters with sections in _toc.yml
-    python build_pdfs.py prob11     # only the given chapters
+    python build_pdfs.py                    # all temas in _toc.yml
+    python build_pdfs.py tema-1 tema-2      # only the given temas
 
 The PDFs are written to ao_notebooks/_build/pdf/
 """
 
+import re
 import shutil
 import subprocess
 import sys
@@ -28,6 +32,15 @@ def chapter_title(chapter):
     return chapter
 
 
+def group_title(title):
+    """Return the tema of a chapter title, e.g. 'Tema 1.1' -> 'Tema 1'"""
+    return re.sub(r"\.\d+$", "", title)
+
+
+def slugify(title):
+    return title.lower().replace(" ", "-")
+
+
 def find_jupyter_book():
     exe = Path(sys.executable).with_name("jupyter-book")
     if exe.exists():
@@ -35,15 +48,13 @@ def find_jupyter_book():
     return shutil.which("jupyter-book")
 
 
-def build_chapter(jb, entry, config):
-    chapter = entry["file"]
-    title = chapter_title(chapter)
-    slug = "ao-" + title.lower().replace(" ", "-")
+def build_group(jb, title, entries, config):
+    slug = "ao-" + slugify(title)
 
-    workdir = BUILD / "pdf-temas" / chapter
+    workdir = BUILD / "pdf-temas" / slugify(title)
     workdir.mkdir(parents=True, exist_ok=True)
 
-    toc = {"format": "jb-book", "root": "index", "chapters": [entry]}
+    toc = {"format": "jb-book", "root": "index", "chapters": entries}
     toc_path = workdir / "toc.yml"
     with open(toc_path, "w", encoding="utf-8") as fd:
         yaml.safe_dump(toc, fd, allow_unicode=True, sort_keys=False)
@@ -55,7 +66,8 @@ def build_chapter(jb, entry, config):
     with open(cfg_path, "w", encoding="utf-8") as fd:
         yaml.safe_dump(cfg, fd, allow_unicode=True, sort_keys=False)
 
-    print(f"--- Building {title} ({chapter})", flush=True)
+    chapters = ", ".join(entry["file"] for entry in entries)
+    print(f"--- Building {title} ({chapters})", flush=True)
     result = subprocess.run(
         [
             jb, "build", str(BOOK),
@@ -86,23 +98,32 @@ def main(args):
     with open(BOOK / "_config.yml", encoding="utf-8") as fd:
         config = yaml.safe_load(fd)
 
-    chapters = [entry for entry in toc["chapters"] if "sections" in entry]
+    groups = {}
+    for entry in toc["chapters"]:
+        if "sections" in entry:
+            title = group_title(chapter_title(entry["file"]))
+            groups.setdefault(title, []).append(entry)
+
     if args:
-        chapters = [entry for entry in chapters if entry["file"] in args]
+        unknown = set(args) - {slugify(title) for title in groups}
+        if unknown:
+            names = ", ".join(slugify(title) for title in groups)
+            sys.exit(f"Unknown temas: {', '.join(sorted(unknown))}. Available: {names}")
+        groups = {t: e for t, e in groups.items() if slugify(t) in args}
 
     built, failed = [], []
-    for entry in chapters:
-        dest = build_chapter(jb, entry, config)
+    for title, entries in groups.items():
+        dest = build_group(jb, title, entries, config)
         if dest:
             built.append(dest)
         else:
-            failed.append(entry["file"])
+            failed.append(title)
 
     print()
     for dest in built:
         print(f"PDF: {dest}")
-    for chapter in failed:
-        print(f"FAILED: {chapter}")
+    for title in failed:
+        print(f"FAILED: {title}")
     return 1 if failed else 0
 
 

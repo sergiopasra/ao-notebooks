@@ -15,9 +15,9 @@ under the MIT License.
 
 ## PDFs
 
-To build one PDF per chapter (requires TeX Live with `xelatex` and `latexmk`):
+To build one PDF per tema (requires TeX Live with `xelatex` and `latexmk`):
 
-    python build_pdfs.py            # all chapters in _toc.yml
-    python build_pdfs.py prob11     # only some chapters
+    python build_pdfs.py                  # all temas in _toc.yml
+    python build_pdfs.py tema-1 tema-2    # only some temas
 
 The PDFs are written to `ao_notebooks/_build/pdf/`.
