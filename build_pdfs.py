@@ -2,6 +2,7 @@
 
 Chapters are grouped by the title of their first heading, dropping the
 subsection number: 'Tema 1.1', 'Tema 1.2'... go together in 'Tema 1'.
+Chapters without sections (e.g. 'Uso de Python') are added to every PDF.
 
 Usage:
     python build_pdfs.py                    # all temas in _toc.yml
@@ -48,13 +49,13 @@ def find_jupyter_book():
     return shutil.which("jupyter-book")
 
 
-def build_group(jb, title, entries, config):
+def build_group(jb, title, entries, common, config):
     slug = "ao-" + slugify(title)
 
     workdir = BUILD / "pdf-temas" / slugify(title)
     workdir.mkdir(parents=True, exist_ok=True)
 
-    toc = {"format": "jb-book", "root": "index", "chapters": entries}
+    toc = {"format": "jb-book", "root": "index", "chapters": common + entries}
     toc_path = workdir / "toc.yml"
     with open(toc_path, "w", encoding="utf-8") as fd:
         yaml.safe_dump(toc, fd, allow_unicode=True, sort_keys=False)
@@ -98,6 +99,7 @@ def main(args):
     with open(BOOK / "_config.yml", encoding="utf-8") as fd:
         config = yaml.safe_load(fd)
 
+    common = [entry for entry in toc["chapters"] if "sections" not in entry]
     groups = {}
     for entry in toc["chapters"]:
         if "sections" in entry:
@@ -113,7 +115,7 @@ def main(args):
 
     built, failed = [], []
     for title, entries in groups.items():
-        dest = build_group(jb, title, entries, config)
+        dest = build_group(jb, title, entries, common, config)
         if dest:
             built.append(dest)
         else:

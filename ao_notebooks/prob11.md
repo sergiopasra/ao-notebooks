@@ -1,7 +1,3 @@
-
-
-Astronomía Observacional, curso 2026-2027
-
 # Tema 1.1
 
 1. Asumiendo que la Tierra es una esfera de radio medio 6371 km, calcular la distancia

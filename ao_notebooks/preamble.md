@@ -15,8 +15,8 @@ kernelspec:
 :format: latex
 ```
 
-{raw-latex}`\section*{Uso de Python}`
-{raw-latex}`\addcontentsline{toc}{chapter}{Uso de Python}`
+% Unnumbered chapter in the PDF
+{raw-latex}`\setcounter{secnumdepth}{-1}`
 
 # Uso de Python
 
@@ -56,3 +56,6 @@ import numpy as np
 print("El valor del coseno de 60 grados es ")
 np.cos( Angle(60 * u.deg))
 ```
+
+% Restore numbering for the next chapters
+{raw-latex}`\setcounter{secnumdepth}{2}`
