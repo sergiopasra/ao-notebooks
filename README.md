@@ -12,3 +12,12 @@ Code examples contained in the notebooks are licensed under the MIT License.
 
 The code used to build and generate this Jupyter Book is also licensed
 under the MIT License.
+
+## PDFs
+
+To build one PDF per chapter (requires TeX Live with `xelatex` and `latexmk`):
+
+    python build_pdfs.py            # all chapters in _toc.yml
+    python build_pdfs.py prob11     # only some chapters
+
+The PDFs are written to `ao_notebooks/_build/pdf/`.
