@@ -68,23 +68,23 @@ Se mide en la estrella estándar Vega durante 1 minuto a diferentes distancias c
 
 |  z         | V   |  B   |  U   |
 |------------|-----|------|------|
-|   20º      | 1e4 | 8e3  | 5e3  |
-|   40º      |9460 |7247  | 4223 |
-|   60º      |8063 |5451  | 2597 |
+|   20°      | 1e4 | 8e3  | 5e3  |
+|   40°      |9460 |7247  | 4223 |
+|   60°      |8063 |5451  | 2597 |
 
 Posteriormente se miden los flujos para la estrella desconocida, que es mucho más débil que
 Vega, midiéndose en cada filtro durante 10 minutos. Se obtienen los siguientes registros:
 
 |  z         | V   |  B   |  U   |
 |------------|-----|------|------|
-|  40º       |3784 | 2998 | 1689 |
+|  40°       |3784 | 2998 | 1689 |
 
 
 Determinar los valores de $m_V$, $m_B$ y $m_U$.
 
 
 **2.10** La nebulosa planetaria NGC7662 tiene una paralaje de 0.86 mas, magnitud visual aparente = 12.0 y un radio angular 
-de 0.257’. 
+de 0.257′. 
 
 
 Suponiendo que la nebulosa es un disco de radiancia uniforme calcular:
@@ -107,7 +107,7 @@ Asumimos para la nebulosa una magnitud absoluta visual de 1.67 y un radio de 179
 **2.12** Para un cierto lugar de observación, el valor del parámetro de Fried en el cenit es 
 $r_0$(500 nm) = 18 cm. Calcular la resolución de un telescopio de 15 cm de apertura y de otro de 1m a una longitud de onda λ = 600nm. 
 
-En ambos casos, calcular la resolución a 0º y 45º de distancia cenital.
+En ambos casos, calcular la resolución a 0° y 45° de distancia cenital.
 
 **2.13** Supongamos una galaxia de 10$^{11}$ masas solares. Esta galaxia está compuesta por dos tipos de estrellas: tipo 1 de 1.1 M$_{\odot}$ y tipo 2 de 60 M$_{\odot}$. Supongamos, además, que 1.1 10$^{10}$ masas solares corresponden a las estrellas de tipo 1 y el resto es de tipo 2.
 

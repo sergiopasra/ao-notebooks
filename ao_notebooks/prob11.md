@@ -10,7 +10,7 @@ cenital es de 80° para un observador de latitud 57° N.
 4. Calcular las coordenadas horizontales de la estrella Altair (α Aql) con coordenadas:
 RA 19ʰ50ᵐ47ˢ DEC +08°52′06″ (coordenadas ICRS J2000)
 en Santander, con latitud 43°28′N y longitud 3°48′00″ W, cuando el tiempo sidéreo local es
-TSL = 22ʰh12ᵐ18ˢ
+TSL = 22ʰ12ᵐ18ˢ
 5. A las 0ʰ5ᵐ de tiempo sidéreo local (TSL) en un Observatorio de latitud φ = 43°22′12″ se
 midieron las coordenadas horizontales de una estrella obteniéndose una distancia cenital z =
 14°20′55″.75 y un acimut A = 357°29′29″.31. Calcular las coordenadas ecuatoriales de

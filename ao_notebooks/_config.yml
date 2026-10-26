@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/v1/customize/config.html
 
-title: Ejercicios de Astronomia Observacional
+title: Ejercicios de Astronomía Observacional
 author: Sergio Pascual
 copyright: "Universidad Complutense de Madrid, 2020-2027"
 logo: images/ucm_logo.png
@@ -49,7 +49,7 @@ html:
 repository:
   url: https://github.com/sergiopasra/ao-notebooks
   path_to_book: ao_notebooks
-  branch: master
+  branch: main
 
 launch_buttons:
   binderhub_url: "https://mybinder.org"  
